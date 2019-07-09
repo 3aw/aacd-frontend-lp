@@ -1,9 +1,7 @@
-import React, { Component } from "react";
-
+import React from "react";
 import { Container } from "./styles";
 
-export default class Button extends Component {
-  render() {
-    return <button />;
-  }
-}
+const Button = (props, { children }) => (
+  <Container width={props.width}>{props.children}</Container>
+);
+export default Button;

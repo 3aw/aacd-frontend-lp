@@ -1,0 +1,10 @@
+export default {
+  fonts: {
+    small: "12px",
+    medium: "16px",
+    regular: "20px",
+    large: "24px",
+    xlarge: "28px;",
+    Title: "48px"
+  }
+};
