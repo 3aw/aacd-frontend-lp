@@ -26,6 +26,7 @@ export const BorderWrap = styled.div`
   background: linear-gradient(#d26a35, #e6ad2f);
   border-radius: ${props => props.bRadius};
   padding: 4px;
+  height: fit-content;
 `;
 
 export const Button = styled.button`

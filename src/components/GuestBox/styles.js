@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { colors, metrics } from "../../global/index";
 
 export const Container = styled.div`
@@ -37,4 +36,5 @@ export const Ocupation = styled.p`
   font-family: "Asap";
   font-size: ${metrics.fonts.medium};
   color: ${colors.lightred};
+  font-weight: 400;
 `;
