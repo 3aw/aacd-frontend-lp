@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { colors, metrics } from "../../global/index";
 import Button from "../../components/Button";
+import GuestBox from "../../components/GuestBox";
 import { Container } from "./styles";
 
 export default class Home extends Component {
@@ -14,6 +15,7 @@ export default class Home extends Component {
         >
           Qualquer coisas
         </Button>
+        <GuestBox />
       </Container>
     );
   }
