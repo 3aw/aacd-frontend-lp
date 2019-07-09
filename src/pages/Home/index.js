@@ -10,7 +10,7 @@ export default class Home extends Component {
         <Button
           bRadius={metrics.borderRadius.round}
           backgroundColor={colors.white}
-          width={350}
+          width={200}
         >
           Qualquer coisas
         </Button>

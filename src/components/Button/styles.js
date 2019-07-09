@@ -45,11 +45,35 @@ export const Button = styled.button`
     color: ${colors.white};
   }
 `;
+export const DisabledBorderWrap = styled(BorderWrap)`
+  background: ${colors.gray};
+`;
+export const DisabledButton = styled(Button)`
+  color: ${colors.gray};
+  cursor: auto;
+  &:hover {
+    background: #fff;
+    color: ${colors.gray};
+  }
+`;
 
-export const Container = ({ backgroundColor, children, width, bRadius }) => (
-  <BorderWrap bRadius={bRadius} width={width}>
-    <Button bRadius={bRadius} backgroundColor={backgroundColor}>
-      {children}
-    </Button>
-  </BorderWrap>
-);
+export const Container = ({
+  backgroundColor,
+  children,
+  width,
+  bRadius,
+  disabled
+}) =>
+  disabled ? (
+    <DisabledBorderWrap bRadius={bRadius} width={width}>
+      <DisabledButton bRadius={bRadius} backgroundColor={colors.white}>
+        {children}
+      </DisabledButton>
+    </DisabledBorderWrap>
+  ) : (
+    <BorderWrap bRadius={bRadius} width={width}>
+      <Button bRadius={bRadius} backgroundColor={backgroundColor}>
+        {children}
+      </Button>
+    </BorderWrap>
+  );

@@ -6,6 +6,7 @@ const Button = props => (
     bRadius={props.bRadius}
     backgroundColor={props.backgroundColor}
     width={props.width}
+    disabled={props.disabled}
   >
     {props.children}
   </Container>
