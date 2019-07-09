@@ -24,14 +24,13 @@ import { colors, metrics } from "../../global/index";
 export const BorderWrap = styled.div`
   width: ${props => props.width}px;
   background: linear-gradient(#d26a35, #e6ad2f);
-  border-radius: 32px;
+  border-radius: ${props => props.bRadius};
   padding: 4px;
 `;
 
 export const Button = styled.button`
-  background: none;
   border: none;
-  border-radius: 32px;
+  border-radius: ${props => props.bRadius};
   text-align: center;
   font-family: "Asap";
   padding: 10px 0;
@@ -39,7 +38,7 @@ export const Button = styled.button`
   font-size: ${metrics.fonts.regular};
   color: ${colors.orange};
   width: 100%;
-  background: #fff;
+  background: ${props => props.backgroundColor};
   cursor: pointer;
   &:hover {
     background: linear-gradient(#d26a35, #e6ad2f);
@@ -47,8 +46,10 @@ export const Button = styled.button`
   }
 `;
 
-export const Container = (props, { children }) => (
-  <BorderWrap width={props.width}>
-    <Button>{children}</Button>
+export const Container = ({ backgroundColor, children, width, bRadius }) => (
+  <BorderWrap bRadius={bRadius} width={width}>
+    <Button bRadius={bRadius} backgroundColor={backgroundColor}>
+      {children}
+    </Button>
   </BorderWrap>
 );
