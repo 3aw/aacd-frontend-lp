@@ -5,8 +5,6 @@ import IncomeLogo from "../../images/income.png";
 
 export const Container = styled.div`
   width: 100%;
-  padding-left: 55px;
-  padding-top: 70px;
 `;
 
 export const ImpactarLogo = styled.img``;
@@ -49,7 +47,7 @@ export const InfoBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 30px;
-  width: 100%;
+  width: 80%;
   margin-bottom: 60px;
 `;
 export const TextBox = styled.div`
