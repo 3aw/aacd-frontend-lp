@@ -7,6 +7,7 @@ const Button = props => (
     backgroundColor={props.backgroundColor}
     width={props.width}
     disabled={props.disabled}
+    bThickness={props.bThickness}
   >
     {props.children}
   </Container>

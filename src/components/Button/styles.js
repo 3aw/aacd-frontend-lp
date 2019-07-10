@@ -2,30 +2,11 @@ import styled from "styled-components";
 import React from "react";
 import { colors, metrics } from "../../global/index";
 
-// export const Container = styled.button`
-//   width: ${props => props.width}px;
-//   padding: 10px 0;
-//   background: none;
-//   border: solid 4px #e6ad2f;
-//   border-radius: 32px;
-//   text-align: center;
-//   font-family: "Asap";
-//   font-weight: "400";
-//   font-size: ${metrics.fonts.regular};
-//   color: ${colors.orange};
-//   cursor: pointer;
-//   :hover {
-//     background: linear-gradient(#d26a35, #e6ad2f);
-//     color: ${colors.white};
-//     border: solid 4px #e6ad2f;
-//   }
-// `;
-
 export const BorderWrap = styled.div`
   width: ${props => props.width}px;
   background: linear-gradient(#d26a35, #e6ad2f);
   border-radius: ${props => props.bRadius};
-  padding: 4px;
+  padding: ${props => props.bThickness}px;
   height: fit-content;
 `;
 
@@ -63,16 +44,17 @@ export const Container = ({
   children,
   width,
   bRadius,
-  disabled
+  disabled,
+  bThickness
 }) =>
   disabled ? (
-    <DisabledBorderWrap bRadius={bRadius} width={width}>
+    <DisabledBorderWrap bThickness={bThickness} bRadius={bRadius} width={width}>
       <DisabledButton bRadius={bRadius} backgroundColor={colors.white}>
         {children}
       </DisabledButton>
     </DisabledBorderWrap>
   ) : (
-    <BorderWrap bRadius={bRadius} width={width}>
+    <BorderWrap bThickness={bThickness} bRadius={bRadius} width={width}>
       <Button bRadius={bRadius} backgroundColor={backgroundColor}>
         {children}
       </Button>

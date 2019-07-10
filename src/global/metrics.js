@@ -6,10 +6,11 @@ export default {
     regular: "20px",
     large: "24px",
     xlarge: "28px;",
+    xxlarge: "32px",
     Title: "48px"
   },
   borderRadius: {
     round: "32px",
-    square: "16px"
+    square: "8px"
   }
 };
