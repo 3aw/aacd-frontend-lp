@@ -1,15 +1,5 @@
 import React from "react";
-import Speaker from "../../images/Speakers/dr_claudio.png";
-import {
-  Container,
-  Image,
-  Theme,
-  Name,
-  Ocupation,
-  TopText,
-  Strong
-} from "./styles";
-import M from "../../images/M.png";
+import { Container, Image, Theme, Name, Ocupation, TopText } from "./styles";
 
 const SpeakerBox = props => (
   <Container bg={props.bg}>

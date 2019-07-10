@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { colors, metrics } from "../../global/index";
 import { Container } from "./styles";
 import Header from "../../components/Header";
 import Guests from "../../components/Guests";
 import ThemesAndSpeakers from "../../components/ThemesAndSpeakers";
+import Tickets from "../../components/Tickets";
 
 export default class Home extends Component {
   render() {
@@ -12,6 +12,7 @@ export default class Home extends Component {
         <Header />
         <Guests />
         <ThemesAndSpeakers />
+        <Tickets />
       </Container>
     );
   }

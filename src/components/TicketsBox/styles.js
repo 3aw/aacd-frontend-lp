@@ -11,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  background: ${colors.white};
 `;
 
 export const TicketLot = styled.div`

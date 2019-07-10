@@ -1,6 +1,5 @@
 import React from "react";
-import Guest from "../../images/Guests/bobfloriano.png";
-import { Container, Image, Function, Name, Ocupation, TopText } from "./styles";
+import { Container, Image, Function, Name, Ocupation } from "./styles";
 
 const GuestBox = props => (
   <Container>
