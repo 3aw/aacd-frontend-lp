@@ -1,12 +1,14 @@
 import React from "react";
 import Speaker from "../../images/teste2.png";
-import { Container, Image, Theme, Name, Ocupation } from "./styles";
+import { Container, Image, Theme, Name, Ocupation, TopText } from "./styles";
 
 const SpeakerBox = () => (
   <Container>
-    <Image src={Speaker} />
-    <Theme>Motivação</Theme>
-    <Name>Bernadinho</Name>
+    <TopText>
+      <Image src={Speaker} />
+      <Theme>Motivação</Theme>
+      <Name>Bernadinho</Name>
+    </TopText>
     <Ocupation>
       Técnico da Seleção Brasileira de voleibol e campeão olímpico
     </Ocupation>

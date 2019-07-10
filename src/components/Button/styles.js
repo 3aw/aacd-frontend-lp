@@ -33,7 +33,7 @@ export const Button = styled.button`
   border: none;
   border-radius: ${props => props.bRadius};
   text-align: center;
-  font-family: "Asap";
+  font-family: "Asap", sans-serif;
   padding: 10px 0;
   font-weight: "400";
   font-size: ${metrics.fonts.regular};

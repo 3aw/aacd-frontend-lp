@@ -17,23 +17,24 @@ export const Image = styled.img`
 `;
 
 export const Function = styled.p`
-  font-family: "Owswald", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 300;
   font-size: ${metrics.fonts.medium};
   color: ${colors.red};
   text-transform: uppercase;
+  letter-spacing: 3.2px;
 `;
 
 export const Name = styled.h3`
   color: ${colors.darkgreen};
-  font-family: 'Asap';
+  font-family: "Asap", sans-serif;
   text-transform: uppercase;
-  font-size${metrics.fonts.xlarge};
+  font-size: ${metrics.fonts.xlarge};
   font-weight: 700;
 `;
 
 export const Ocupation = styled.p`
-  font-family: "Asap";
+  font-family: "Asap", sans-serif;
   font-size: ${metrics.fonts.medium};
   color: ${colors.lightred};
   font-weight: 400;
