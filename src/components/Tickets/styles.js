@@ -28,6 +28,8 @@ export const TitleText = styled.h2`
 `;
 export const TicketsContainer = styled.div`
   display: flex;
+  width: 100%;
+  justify-content: center;
 `;
 
 export const Title = () => (

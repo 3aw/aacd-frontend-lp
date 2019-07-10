@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from "react";
 import { colors, metrics } from "../../global/index";
 
 export const Container = styled.div`
@@ -9,9 +10,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   background: ${colors.white};
+  margin-right: 20px;
+  padding-bottom: 20px;
 `;
 
 export const TicketLot = styled.div`
@@ -34,11 +37,13 @@ export const TicketTotal = styled.p`
   letter-spacing: 1.6px;
   font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
 `;
 
 export const PriceBox = styled.div`
   position: relative;
   width: auto;
+  height: 120px;
 `;
 
 export const PriceCurrency = styled.p`
@@ -61,3 +66,14 @@ export const Cents = styled(PriceCurrency)`
 export const Price = styled.div`
   display: flex;
 `;
+
+export const PriceTotal = ({ children }) => {
+  const price = children.split(",");
+  console.log(price);
+  return (
+    <>
+      <PriceValue>{price[0]}</PriceValue>
+      <Cents>,{price[1]}</Cents>
+    </>
+  );
+};

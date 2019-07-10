@@ -11,20 +11,20 @@ import {
   PriceCurrency,
   PriceValue,
   Price,
-  Cents
+  Cents,
+  PriceTotal
 } from "./styles";
 
-const TicketsBox = () => (
+const TicketsBox = props => (
   <Container>
     <TicketLot>
-      <LotType>2º Lote</LotType>
-      <TicketTotal>220 Ingressos</TicketTotal>
+      <LotType>{props.lot}</LotType>
+      <TicketTotal>{props.tickets}</TicketTotal>
     </TicketLot>
     <PriceBox>
-      <PriceCurrency>R$</PriceCurrency>
       <Price>
-        <PriceValue>400</PriceValue>
-        <Cents>,00</Cents>
+        <PriceCurrency>{props.currency}</PriceCurrency>
+        <PriceTotal>{props.price}</PriceTotal>
       </Price>
     </PriceBox>
     <Button

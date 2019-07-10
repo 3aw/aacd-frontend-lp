@@ -9,25 +9,25 @@ export default class Tickets extends Component {
       {
         id: 1,
         pack: "1º lote",
-        tickets: "40 ingressos",
+        total: "40 ingressos",
         currency: "R$",
-        price: "300",
+        price: "300,00",
         status: 0
       },
       {
         id: 2,
         pack: "2º lote",
-        tickets: "220 ingressos",
+        total: "220 ingressos",
         currency: "R$",
-        price: "400",
+        price: "400,00",
         status: 2
       },
       {
         id: 3,
         pack: "3º lote",
-        tickets: "220 ingressos",
+        total: "220 ingressos",
         currency: "R$",
-        price: "450",
+        price: "450,00",
         status: 3
       }
     ]
@@ -38,7 +38,15 @@ export default class Tickets extends Component {
         <Wrapper>
           <Title />
           <TicketsContainer>
-            <TicketsBox />
+            {this.state.tickets.map(ticket => (
+              <TicketsBox
+                key={ticket.id}
+                lot={ticket.pack}
+                tickets={ticket.total}
+                currency={ticket.currency}
+                price={ticket.price}
+              />
+            ))}
           </TicketsContainer>
         </Wrapper>
       </Container>
