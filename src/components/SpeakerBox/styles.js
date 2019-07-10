@@ -1,7 +1,6 @@
-// import React from "react";
+import React from "react";
 import styled from "styled-components";
 import { colors, metrics } from "../../global/index";
-import M from "../../images/M.png";
 
 export const Container = styled.div`
   width: 206px;
@@ -12,13 +11,14 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-evenly;
   border-radius: ${metrics.borderRadius.square};
-  background: url(${M});
+  background: url(${props => props.bg});
   background-repeat: no-repeat;
+  margin-bottom: 60px;
 `;
 
 export const Image = styled.img``;
 
-export const Theme = styled.h3`
+export const ThemeText = styled.h3`
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: ${metrics.fonts.regular};
@@ -27,12 +27,31 @@ export const Theme = styled.h3`
   letter-spacing: 2px;
 `;
 
+export const Strong = styled(ThemeText)`
+  color: ${colors.red};
+  font-weight: 700;
+  display: inline;
+`;
+
+export const Theme = ({ children }) => {
+  const theme = children;
+  const firstLetter = theme.substring(0, 1);
+  const word = theme.substring(1);
+  return (
+    <ThemeText>
+      <Strong>{firstLetter}</Strong>
+      {word}
+    </ThemeText>
+  );
+};
+
 export const Name = styled.h3`
   color: ${colors.lightred};
   font-family: "Asap", sans-serif;
   text-transform: uppercase;
   font-size: ${metrics.fonts.xmedium};
   font-weight: 400;
+  letter-spacing: 1.8px;
 `;
 export const Ocupation = styled.p`
   font-family: "Asap", sans-serif;
@@ -42,18 +61,9 @@ export const Ocupation = styled.p`
   text-align: center;
   text-transform: uppercase;
   padding: 0 15px;
+  letter-spacing: 1.2px;
 `;
 
 export const TopText = styled.div`
   text-align: center;
 `;
-
-// export const Speaker = ({ image, name, ocupation }) => (
-//   <Container>
-//     <TopText>
-//       <Image src={image} />
-//       <Theme>{name}</Theme>
-//     </TopText>
-//       <Ocupation>{ocupation}</Ocupation>
-//   </Container>
-// );

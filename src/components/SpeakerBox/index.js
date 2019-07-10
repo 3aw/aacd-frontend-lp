@@ -1,17 +1,24 @@
 import React from "react";
-import Speaker from "../../images/teste2.png";
-import { Container, Image, Theme, Name, Ocupation, TopText } from "./styles";
+import Speaker from "../../images/Speakers/dr_claudio.png";
+import {
+  Container,
+  Image,
+  Theme,
+  Name,
+  Ocupation,
+  TopText,
+  Strong
+} from "./styles";
+import M from "../../images/M.png";
 
-const SpeakerBox = () => (
-  <Container>
+const SpeakerBox = props => (
+  <Container bg={props.bg}>
     <TopText>
-      <Image src={Speaker} />
-      <Theme>Motivação</Theme>
-      <Name>Bernadinho</Name>
+      <Image src={props.image} />
+      <Theme>{props.theme}</Theme>
+      <Name>{props.name}</Name>
     </TopText>
-    <Ocupation>
-      Técnico da Seleção Brasileira de voleibol e campeão olímpico
-    </Ocupation>
+    <Ocupation>{props.ocupation}</Ocupation>
   </Container>
 );
 

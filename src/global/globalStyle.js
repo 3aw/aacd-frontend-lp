@@ -24,6 +24,8 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Wrapper = styled.div`
   width: 1110px;
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin: 0 auto;
 `;
