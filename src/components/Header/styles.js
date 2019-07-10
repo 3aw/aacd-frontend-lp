@@ -5,6 +5,7 @@ import IncomeLogo from "../../images/income.png";
 
 export const Container = styled.div`
   width: 100%;
+  margin-bottom: 105px;
 `;
 
 export const ImpactarLogo = styled.img``;

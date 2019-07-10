@@ -8,8 +8,8 @@ export default class Home extends Component {
   render() {
     return (
       <Container>
-        {/* <Header /> */}
-        <Guests />
+        <Header />
+        {/* <Guests /> */}
       </Container>
     );
   }
