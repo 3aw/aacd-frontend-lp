@@ -9,12 +9,13 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  padding-bottom: 135px;
 `;
 
 export const TitleBox = styled.div`
   text-align: center;
   border-bottom: solid 2px ${colors.lightgreen};
-  width: 700px;
+  min-width: 700px;
   margin: 60px 0;
 `;
 

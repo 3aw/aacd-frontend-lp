@@ -3,8 +3,8 @@ import React from "react";
 import { colors, metrics } from "../../global/index";
 
 export const Container = styled.div`
-  width: 206px;
-  height: 267px;
+  width: 226px;
+  height: 287px;
   border-radius: ${metrics.borderRadius.square};
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
   display: flex;
@@ -14,7 +14,7 @@ export const Container = styled.div`
   position: relative;
   background: ${colors.white};
   margin-right: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
 `;
 
 export const TicketLot = styled.div`

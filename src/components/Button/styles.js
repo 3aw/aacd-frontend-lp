@@ -22,7 +22,7 @@ export const Button = styled.button`
   width: 100%;
   background: ${props => props.backgroundColor};
   cursor: pointer;
-  &:hover {
+  &:active {
     background: linear-gradient(#d26a35, #e6ad2f);
     color: ${colors.white};
   }
@@ -33,7 +33,7 @@ export const DisabledBorderWrap = styled(BorderWrap)`
 export const DisabledButton = styled(Button)`
   color: ${colors.gray};
   cursor: auto;
-  &:hover {
+  &:active {
     background: #fff;
     color: ${colors.gray};
   }
