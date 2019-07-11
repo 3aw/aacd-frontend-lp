@@ -22,32 +22,19 @@ export default class Menu extends Component {
     window.addEventListener("scroll", this.handleScroll);
   }
 
-  componentWillUnmount() {
-    // If this component is unmounted, stop listening
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
   handleScroll(e) {
-    let lastScrollTop = 0;
-    const currentScrollTop = this.state.prevScrollpos;
-    if (!this.state.hidden && currentScrollTop > lastScrollTop) {
+    if (e.pageY > 200) {
       this.setState({ hidden: false });
-    } else if (this.state.hidden) {
+    } else {
       this.setState({ hidden: true });
     }
-    lastScrollTop = currentScrollTop;
   }
 
   render() {
-    return this.state.hidden ? null : (
+    return (
       <Container hidden={this.state.hidden}>
         <ImageLogo src={Logo} />
-        <Button
-          width={435}
-          backgroundColor={colors.white}
-          bThickness={4}
-          bRadius={metrics.borderRadius.round}
-        >
+        <Button width={435} backgroundColor={colors.white} bThickness={4} bRadius={metrics.borderRadius.round}>
           Clique para se inscrever!
         </Button>
       </Container>
