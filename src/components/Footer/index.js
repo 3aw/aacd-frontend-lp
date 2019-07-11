@@ -1,10 +1,13 @@
 import React from "react";
 import Supporters from "../Supporters";
 import { Container } from "./styles";
+import { Wrapper } from "../../global/globalStyle";
 
 const Footer = () => (
   <Container>
-    <Supporters />
+    <Wrapper>
+      <Supporters />
+    </Wrapper>
   </Container>
 );
 

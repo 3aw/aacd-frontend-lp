@@ -15,9 +15,11 @@ export const Container = styled.div`
 
 export const TitleBox = styled.div`
   text-align: center;
-  border-bottom: solid 2px ${colors.lightgreen};
-  min-width: 700px;
+  border-bottom: solid 2px #77b9b6;
+  max-width: 500px;
   margin: 60px 0;
+  display: flex;
+  justify-content: center;
 `;
 
 export const TitleText = styled.h2`
@@ -27,6 +29,7 @@ export const TitleText = styled.h2`
   text-transform: uppercase;
   letter-spacing: 9.6px;
   margin-bottom: 20px;
+  white-space: nowrap;
 `;
 export const TicketsContainer = styled.div`
   display: flex;
@@ -52,6 +55,7 @@ export const BoxBackground = styled.div`
   bottom: 0;
   border-radius: ${metrics.borderRadius.soft};
   bottom: -65px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.7);
 `;
 export const Box = styled(BoxBackground)`
   background: ${colors.darkgreen};
@@ -60,6 +64,7 @@ export const Box = styled(BoxBackground)`
   bottom: 10px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 export const Local = styled.p`
   font-family: "Oswald", sans-serif;

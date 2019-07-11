@@ -49,7 +49,7 @@ export default class Tickets extends Component {
             ))}
           </TicketsContainer>
         </Wrapper>
-        <FloatingBox>Teste</FloatingBox>
+        <FloatingBox />
       </Container>
     );
   }
