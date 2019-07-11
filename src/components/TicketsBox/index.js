@@ -9,9 +9,7 @@ import {
   TicketTotal,
   PriceBox,
   PriceCurrency,
-  PriceValue,
   Price,
-  Cents,
   PriceTotal
 } from "./styles";
 
