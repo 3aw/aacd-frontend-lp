@@ -8,6 +8,11 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  background: ${colors.white};
+  position: fixed;
+  left: -100%;
+  transition: left 1s;
+  z-index: 999;
 `;
 // item
 export const Box = styled.div`

@@ -7,17 +7,19 @@ import Tickets from "../../components/Tickets";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
 import TicketReturn from "../../components/TicketReturn/index";
+import Menu from "../../components/Menu";
 
 export default class Home extends Component {
   render() {
     return (
       <Container>
+        <Menu />
         <Form />
-        {/* <Header />
+        <Header />
         <Guests />
         <ThemesAndSpeakers />
         <Tickets />
-        <Footer /> */}
+        <Footer />
       </Container>
     );
   }
