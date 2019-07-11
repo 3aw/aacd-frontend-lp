@@ -4,7 +4,7 @@ import { colors, metrics } from "../../global/index";
 
 export const BorderWrap = styled.div`
   width: ${props => props.width}px;
-  background: linear-gradient(#d26a35, #e6ad2f);
+  background: linear-gradient(to right, #d26a35, #e6ad2f);
   border-radius: ${props => props.bRadius};
   padding: ${props => props.bThickness}px;
   height: fit-content;
@@ -23,8 +23,8 @@ export const Button = styled.button`
   width: 100%;
   background: ${props => props.backgroundColor};
   cursor: pointer;
-  &:active {
-    background: linear-gradient(#d26a35, #e6ad2f);
+  &:hover {
+    background: linear-gradient(to right, #d26a35, #e6ad2f);
     color: ${colors.white};
   }
 `;
@@ -34,7 +34,7 @@ export const DisabledBorderWrap = styled(BorderWrap)`
 export const DisabledButton = styled(Button)`
   color: ${colors.gray};
   cursor: auto;
-  &:active {
+  &:hover {
     background: #fff;
     color: ${colors.gray};
   }

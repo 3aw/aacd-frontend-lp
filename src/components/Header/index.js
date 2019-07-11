@@ -16,7 +16,7 @@ export default class Header extends Component {
   render() {
     return (
       <Container>
-        <Menu />
+        {/* <Menu /> */}
         <HeaderBox>
           <ImpactarLogo src={Logo} />
           <TitleBox />
