@@ -12,7 +12,7 @@ export default class Tickets extends Component {
         total: "40 ingressos",
         currency: "R$",
         price: "300,00",
-        status: 0
+        disabled: true
       },
       {
         id: 2,
@@ -20,7 +20,7 @@ export default class Tickets extends Component {
         total: "220 ingressos",
         currency: "R$",
         price: "400,00",
-        status: 2
+        disabled: false
       },
       {
         id: 3,
@@ -28,7 +28,7 @@ export default class Tickets extends Component {
         total: "220 ingressos",
         currency: "R$",
         price: "450,00",
-        status: 3
+        disabled: false
       }
     ]
   };
@@ -41,6 +41,7 @@ export default class Tickets extends Component {
             {this.state.tickets.map(ticket => (
               <TicketsBox
                 key={ticket.id}
+                disabled={ticket.disabled}
                 lot={ticket.pack}
                 tickets={ticket.total}
                 currency={ticket.currency}

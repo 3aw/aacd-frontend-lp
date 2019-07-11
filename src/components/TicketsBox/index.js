@@ -30,6 +30,7 @@ const TicketsBox = props => (
       bRadius={metrics.borderRadius.square}
       backgroundColor={colors.white}
       bThickness={2}
+      disabled={props.disabled}
     >
       Comprar
     </Button>

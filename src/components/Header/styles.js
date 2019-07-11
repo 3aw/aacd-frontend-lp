@@ -6,14 +6,14 @@ import IncomeLogo from "../../images/income.png";
 export const Container = styled.div`
   width: 100%;
   margin-bottom: 105px;
-  padding-left: 55px;
-  padding-top: 70px;
 `;
 
 export const ImpactarLogo = styled.img``;
 
 export const HeaderBox = styled.header`
-  width: 40%;
+  width: 50%;
+  padding-left: 55px;
+  padding-top: 70px;
 `;
 
 export const Title = styled.h2`
@@ -36,6 +36,7 @@ export const Text = styled.p`
   font-weight: 400;
   color: ${colors.darkgreen};
   margin-top: 20px;
+  padding-right: 28%;
 `;
 
 export const InfoText = styled.p`

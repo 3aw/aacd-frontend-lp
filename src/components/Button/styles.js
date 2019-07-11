@@ -17,6 +17,7 @@ export const Button = styled.button`
   font-family: "Asap", sans-serif;
   padding: 10px 0;
   font-weight: "400";
+  text-transform: uppercase;
   font-size: ${metrics.fonts.regular};
   color: ${colors.orange};
   width: 100%;
