@@ -69,7 +69,6 @@ export const Price = styled.div`
 
 export const PriceTotal = ({ children }) => {
   const price = children.split(",");
-  console.log(price);
   return (
     <>
       <PriceValue>{price[0]}</PriceValue>

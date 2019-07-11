@@ -101,17 +101,19 @@ export const SupportersContainer = styled.div`
 `;
 
 export const ContactBox = styled(TitleBox)`
-  margin: 80px 0 40px;
+  margin: 0 0 40px;
   padding-bottom: 5px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  width: 10%;
+  width: 100%;
 `;
 export const ContactText = styled(TitleText)`
   font-size: ${metrics.fonts.regular};
   margin-bottom: 0;
   letter-spacing: 4px;
+  justify-self: flex-end;
+  margin-top: 80px;
 `;
 export const Text = styled.p`
   letter-spacing: ${props => props.ls}px;
@@ -189,12 +191,36 @@ export const Contacts = () => (
     </Box>
   </ContactsContainer>
 );
-
-export const ContactSection = () => (
-  <ContactBox>
+export const Bold = styled.p`
+  letter-spacing: 3.2px;
+  font-family: "Asap", sans-serif;
+  font-size: ${metrics.fonts.medium};
+  color: ${colors.dark};
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline;
+`;
+export const Fixed = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+`;
+export const Wrap = styled.div;
+export const ContactSection = ({ children }) => (
+  <Fixed>
     <ContactText>Contato</ContactText>
-    <Text ls={3.2} size={metrics.fonts.medium} color={colors.dark} weight={400}>
-      equipe de eventos da <Text weight={700}>aacd</Text>
-    </Text>
-  </ContactBox>
+    <ContactBox>
+      <Text
+        ls={3.2}
+        size={metrics.fonts.medium}
+        color={colors.dark}
+        weight={400}
+      >
+        equipe de eventos da&nbsp;
+      </Text>
+      <Bold> aacd</Bold>
+    </ContactBox>
+  </Fixed>
 );

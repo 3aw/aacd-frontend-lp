@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MenuBar, Container, ImageLogo } from "./styles";
+import { Container, ImageLogo } from "./styles";
 import Button from "../Button";
 import Logo from "../../images/logosmall.png";
 import { colors, metrics } from "../../global/index";

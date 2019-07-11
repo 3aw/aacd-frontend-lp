@@ -5,8 +5,8 @@ import Guests from "../../components/Guests";
 import ThemesAndSpeakers from "../../components/ThemesAndSpeakers";
 import Tickets from "../../components/Tickets";
 import Footer from "../../components/Footer";
-import Form from "../../components/Form";
-import TicketReturn from "../../components/TicketReturn/index";
+// import Form from "../../components/Form";
+// import TicketReturn from "../../components/TicketReturn/index";
 import Menu from "../../components/Menu";
 
 export default class Home extends Component {
@@ -14,7 +14,7 @@ export default class Home extends Component {
     return (
       <Container>
         <Menu />
-        <Form />
+        {/* <Form /> */}
         <Header />
         <Guests />
         <ThemesAndSpeakers />

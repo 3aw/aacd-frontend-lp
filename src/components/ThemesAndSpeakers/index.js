@@ -29,7 +29,7 @@ export default class ThemesAndSpeakers extends Component {
           "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
       },
       {
-        id: 2,
+        id: 3,
         background: letterI,
         image: Speaker,
         theme: "Maestria",
@@ -38,7 +38,7 @@ export default class ThemesAndSpeakers extends Component {
           "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
       },
       {
-        id: 2,
+        id: 4,
         background: letterI,
         image: Speaker,
         theme: "Maestria",
@@ -47,7 +47,7 @@ export default class ThemesAndSpeakers extends Component {
           "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
       },
       {
-        id: 2,
+        id: 5,
         background: letterI,
         image: Speaker,
         theme: "Maestria",
@@ -56,7 +56,7 @@ export default class ThemesAndSpeakers extends Component {
           "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
       },
       {
-        id: 2,
+        id: 6,
         background: letterI,
         image: Speaker,
         theme: "Maestria",

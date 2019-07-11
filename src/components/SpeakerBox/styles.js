@@ -27,10 +27,16 @@ export const ThemeText = styled.h3`
   letter-spacing: 2px;
 `;
 
-export const Strong = styled(ThemeText)`
+export const Strong = styled.strong`
   color: ${colors.red};
   font-weight: 700;
   display: inline;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: ${metrics.fonts.regular};
+  color: ${colors.darkgreen};
+  text-transform: uppercase;
+  letter-spacing: 2px;
 `;
 
 export const Theme = ({ children }) => {
