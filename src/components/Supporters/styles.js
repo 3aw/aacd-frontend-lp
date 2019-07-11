@@ -14,6 +14,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 90px;
 `;
 
 export const TitleBox = styled.div`
@@ -115,18 +116,84 @@ export const ContactText = styled(TitleText)`
 export const Text = styled.p`
   letter-spacing: ${props => props.ls}px;
   font-family: "Asap", sans-serif;
-  font-size: ${props => props.size};
+  font-size: ${props => props.size}px;
   color: ${props => props.color};
   font-weight: ${props => props.weight};
   text-transform: uppercase;
   display: inline-block;
   white-space: nowrap;
 `;
+export const ContactsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+`;
 
-export const Contact = () => (
+export const Box = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 130px;
+`;
+export const Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Contacts = () => (
+  <ContactsContainer>
+    <Box>
+      <Text ls={2.4} size={24} weight={500} color={colors.dark}>
+        Andrea Lins
+      </Text>
+      <Item>
+        <Text ls={3.2} size={16} weight={500} color={colors.red}>
+          E-mail
+        </Text>
+        <Text ls={1.6} size={16} weight={700} color={colors.green}>
+          androdrigues@aacd.org.br
+        </Text>
+      </Item>
+      <Item>
+        <Text ls={3.2} size={16} weight={500} color={colors.red}>
+          Telefones
+        </Text>
+        <Text ls={1.6} size={16} weight={700} color={colors.green}>
+          (11) 5576 - 0460
+        </Text>
+      </Item>
+    </Box>
+    <Box>
+      <Text ls={2.4} size={24} weight={500} color={colors.dark}>
+        Geziane Pereira
+      </Text>
+      <Item>
+        <Text ls={3.2} size={16} weight={500} color={colors.red}>
+          E-mail
+        </Text>
+        <Text ls={1.6} size={16} weight={700} color={colors.green}>
+          gleticia@aacd.org.br
+        </Text>
+      </Item>
+      <Item>
+        <Text ls={3.2} size={16} weight={500} color={colors.red}>
+          Telefones
+        </Text>
+        <Text ls={1.6} size={16} weight={700} color={colors.green}>
+          (11) 5576 - 0867
+        </Text>
+      </Item>
+    </Box>
+  </ContactsContainer>
+);
+
+export const ContactSection = () => (
   <ContactBox>
     <ContactText>Contato</ContactText>
-    <Text ls={3.2} size={metrics.fonts.medium} color={"#1f313c"} weight={400}>
+    <Text ls={3.2} size={metrics.fonts.medium} color={colors.dark} weight={400}>
       equipe de eventos da <Text weight={700}>aacd</Text>
     </Text>
   </ContactBox>

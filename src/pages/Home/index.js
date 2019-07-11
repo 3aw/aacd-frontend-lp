@@ -10,10 +10,10 @@ export default class Home extends Component {
   render() {
     return (
       <Container>
-        <Header />
+        {/* <Header />
         <Guests />
         <ThemesAndSpeakers />
-        <Tickets />
+        <Tickets /> */}
         <Footer />
       </Container>
     );

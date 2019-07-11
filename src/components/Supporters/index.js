@@ -6,7 +6,8 @@ import {
   SupportersContainer,
   SponsorsText,
   Sponsors,
-  Contact
+  ContactSection,
+  Contacts
 } from "./styles";
 
 const Supporters = () => (
@@ -16,7 +17,8 @@ const Supporters = () => (
       <SponsorsText />
       <Sponsors />
     </SupportersContainer>
-    <Contact />
+    <ContactSection />
+    <Contacts />
   </Container>
 );
 

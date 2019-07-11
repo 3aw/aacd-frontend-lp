@@ -8,5 +8,6 @@ export default {
   black: "#000",
   lightblue: "#e7fffe",
   lightgreen: "#77b9b6",
-  gray: "#a7a7a7"
+  gray: "#a7a7a7",
+  dark: "#1f313c"
 };

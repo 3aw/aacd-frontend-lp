@@ -29,4 +29,5 @@ export const Wrapper = styled.div`
   flex-direction: column;
   margin: 0 auto;
   position: relative;
+  background: ${props => props.background};
 `;
