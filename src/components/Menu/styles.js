@@ -17,19 +17,3 @@ export const Container = styled.div`
 `;
 
 export const ImageLogo = styled.img``;
-
-// export const MenuBar = hidden => {
-//   return hidden ? null : (
-//     <Container>
-//       <ImageLogo src={Logo} />
-//       <Button
-//         width={435}
-//         backgroundColor={colors.white}
-//         bThickness={4}
-//         bRadius={metrics.borderRadius.round}
-//       >
-//         Clique para se inscrever!
-//       </Button>
-//     </Container>
-//   );
-// };
