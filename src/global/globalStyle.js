@@ -28,4 +28,5 @@ export const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
+  position: relative;
 `;

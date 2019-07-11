@@ -11,6 +11,7 @@ export default {
   },
   borderRadius: {
     round: "32px",
-    square: "8px"
+    square: "8px",
+    soft: "4px"
   }
 };

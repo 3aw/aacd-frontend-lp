@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Wrapper } from "../../global/globalStyle";
-import { Container, Title, TicketsContainer } from "./styles";
+import { Container, Title, TicketsContainer, FloatingBox } from "./styles";
 import TicketsBox from "../../components/TicketsBox";
 
 export default class Tickets extends Component {
@@ -49,6 +49,7 @@ export default class Tickets extends Component {
             ))}
           </TicketsContainer>
         </Wrapper>
+        <FloatingBox>Teste</FloatingBox>
       </Container>
     );
   }
