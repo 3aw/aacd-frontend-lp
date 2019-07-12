@@ -11,7 +11,8 @@ const Button = ({
   bThickness,
   onClick,
   form,
-  dispatch
+  dispatch,
+  teste
 }) => (
   <Container
     bRadius={bRadius}
