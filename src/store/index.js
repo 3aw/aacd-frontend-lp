@@ -1,13 +1,18 @@
 import { createStore } from "redux";
 
 const INITIAL_STATE = {
-  disabled: true,
-  name: "",
-  email: "",
-  celphone: "",
-  birthdate: "",
-  id: "",
-  amount: null
+  form: {
+    disabled: true,
+    name: "",
+    email: "",
+    celphone: "",
+    birthdate: "",
+    id: "",
+    amount: null
+  },
+  menu: {
+    hidden: true
+  }
 };
 
 function reducer(state = INITIAL_STATE, action) {

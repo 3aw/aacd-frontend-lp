@@ -56,4 +56,4 @@ const Form = ({ form, dispatch }) => (
   </Container>
 );
 
-export default connect(state => ({ form: state }))(Form);
+export default connect(state => ({ form: state.form }))(Form);
