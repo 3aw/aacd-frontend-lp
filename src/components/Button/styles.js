@@ -46,7 +46,8 @@ export const Container = ({
   width,
   bRadius,
   disabled,
-  bThickness
+  bThickness,
+  onClick
 }) =>
   disabled ? (
     <DisabledBorderWrap bThickness={bThickness} bRadius={bRadius} width={width}>
@@ -56,7 +57,11 @@ export const Container = ({
     </DisabledBorderWrap>
   ) : (
     <BorderWrap bThickness={bThickness} bRadius={bRadius} width={width}>
-      <Button bRadius={bRadius} backgroundColor={backgroundColor}>
+      <Button
+        onClick={onClick}
+        bRadius={bRadius}
+        backgroundColor={backgroundColor}
+      >
         {children}
       </Button>
     </BorderWrap>

@@ -1,15 +1,27 @@
 import React from "react";
 import { Container } from "./styles";
+import { connect } from "react-redux";
 
-const Button = props => (
+const Button = ({
+  bRadius,
+  backgroundColor,
+  children,
+  width,
+  disabled,
+  bThickness,
+  onClick,
+  form,
+  dispatch
+}) => (
   <Container
-    bRadius={props.bRadius}
-    backgroundColor={props.backgroundColor}
-    width={props.width}
-    disabled={props.disabled}
-    bThickness={props.bThickness}
+    bRadius={bRadius}
+    backgroundColor={backgroundColor}
+    width={width}
+    disabled={disabled}
+    bThickness={bThickness}
+    onClick={onClick}
   >
-    {props.children}
+    {children}
   </Container>
 );
-export default Button;
+export default connect(state => ({ form: state }))(Button);

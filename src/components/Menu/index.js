@@ -6,23 +6,14 @@ import { colors, metrics } from "../../global/index";
 
 export default class Menu extends Component {
   state = {
-    hidden: true,
-    prevScrollpos: window.pageYOffset
+    hidden: true
   };
 
-  constructor(props) {
-    super(props);
-
-    // Bind the function to this component, so it has access to this.state
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-  // navigator.userAgent.indexOf("Chrome") && e.path[1].scrollY
   componentWillMount() {
-    // When this component mounts, begin listening for scroll changes
     window.addEventListener("scroll", this.handleScroll);
   }
 
-  handleScroll(e) {
+  handleScroll = e => {
     if (navigator.userAgent.indexOf("Chrome") >= 0) {
       if (e.path[1].scrollY > 200) {
         this.setState({ hidden: false });
@@ -36,17 +27,21 @@ export default class Menu extends Component {
         this.setState({ hidden: true });
       }
     }
-  }
-
+  };
+  handleClick = () => {
+    console.log("Testando");
+  };
   render() {
     return (
       <Container hidden={this.state.hidden}>
         <ImageLogo src={Logo} />
         <Button
+          disabled={false}
           width={435}
           backgroundColor={colors.white}
           bThickness={4}
           bRadius={metrics.borderRadius.round}
+          onClick={this.handleClick}
         >
           Clique para se inscrever!
         </Button>

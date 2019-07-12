@@ -7,8 +7,10 @@ import Tickets from "../../components/Tickets";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
 // import TicketReturn from "../../components/TicketReturn/index";
+import store from "../../store";
 import Menu from "../../components/Menu";
 import Button from "../../components/Button";
+import { Provider } from "react-redux";
 
 export default class Home extends Component {
   state = {
@@ -21,23 +23,21 @@ export default class Home extends Component {
     // Bind the function to this component, so it has access to this.state
     this.handleClick = this.handleClick.bind(this);
   }
-  componentDidMount() {
-    window.addEventListener("click", this.handleClick);
-  }
-  handleClick = () => {
-    console.log("Funfou");
-  };
+  componentDidMount() {}
+  handleClick = () => {};
   render() {
     return (
-      <Container>
-        <Menu />
-        <Form />
-        <Header />
-        <Guests />
-        <ThemesAndSpeakers />
-        <Tickets />
-        <Footer />
-      </Container>
+      <Provider store={store}>
+        <Container>
+          <Menu />
+          <Form />
+          <Header />
+          <Guests />
+          <ThemesAndSpeakers />
+          <Tickets />
+          <Footer />
+        </Container>
+      </Provider>
     );
   }
 }

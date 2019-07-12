@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: space-between;
   background: ${colors.white};
   position: fixed;
-  left: -100%;
+  left: ${props => (props.disabled ? "-100%" : "0")};
   transition: left 1s;
   z-index: 999;
 `;
