@@ -10,12 +10,13 @@ import {
   InputElement
 } from "./styles";
 import { connect } from "react-redux";
+import * as formActions from "../../store/reducers/actions/form";
 
 const Form = ({ form, dispatch }) => (
   <Container disabled={form.disabled}>
     <Box>
       <FormContainer>
-        <TitleBar />
+        <TitleBar onClick={() => dispatch(formActions.showForm(form))} />
         <FormContent>
           <FormText>Nome</FormText>
           <InputElement type="text" />
@@ -56,4 +57,4 @@ const Form = ({ form, dispatch }) => (
   </Container>
 );
 
-export default connect(state => ({ form: state }))(Form);
+export default connect(state => ({ form: state.form }))(Form);

@@ -69,13 +69,13 @@ export const Item = styled.div`
   align-self: ${props => props.alignSelf};
 `;
 
-export const TitleBar = () => (
+export const TitleBar = props => (
   <TitleBox>
     <Item alignSelf={"center"}>
       <FormTitle>Participe</FormTitle>
     </Item>
     <Item alignSelf={"flex-end"}>
-      <Cancel>Cancelar</Cancel>
+      <Cancel onClick={props.onClick}>Cancelar</Cancel>
     </Item>
   </TitleBox>
 );
