@@ -3,22 +3,22 @@ const INITIAL_STATE = {
 };
 
 export default function menu(state = INITIAL_STATE, action) {
-  if (action.type == "SHOW_MENU") {
+  if (action.type === "SHOW_MENU") {
     return {
       ...state,
       hidden: action.hidden
     };
-  } else if (action.type == "HIDE_MENU") {
+  } else if (action.type === "HIDE_MENU") {
     return {
       ...state,
       hidden: action.hidden
     };
-  } else if (action.type == "SHOW_MENU_FIREFOX") {
+  } else if (action.type === "SHOW_MENU_FIREFOX") {
     return {
       ...state,
       hidden: action.hidden
     };
-  } else if (action.type == "HIDE_MENU_FIREFOX") {
+  } else if (action.type === "HIDE_MENU_FIREFOX") {
     return {
       ...state,
       hidden: action.hidden

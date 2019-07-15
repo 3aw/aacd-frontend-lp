@@ -103,7 +103,7 @@ export const FormContent = styled.div`
   padding: 20px 0 10px;
 `; // form item
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   height: 100vh;
   width: 100%;
   padding: 35px 70px 60px 170px;

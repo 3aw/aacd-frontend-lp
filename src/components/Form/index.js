@@ -12,34 +12,70 @@ import {
 import { connect } from "react-redux";
 import * as formActions from "../../store/reducers/actions/form";
 
+function handleSubmit(e) {
+  e.preventDefault();
+  return {
+    type: "SHOW_CONFIRMATION"
+  };
+}
+function handleChange(e) {
+  console.log(e);
+  return {
+    type: "SET_DATA",
+    payload: {
+      [e.target.name]: e.target.value
+    }
+  };
+}
+
 const Form = ({ form, dispatch }) => (
   <Container disabled={form.disabled}>
     <Box>
-      <FormContainer>
+      <FormContainer onSubmit={e => handleSubmit(e)}>
         <TitleBar onClick={() => dispatch(formActions.showForm(form))} />
         <FormContent>
           <FormText>Nome</FormText>
-          <InputElement type="text" />
+          <InputElement
+            onChange={e => dispatch(handleChange(e))}
+            type="text"
+            name="name"
+          />
         </FormContent>
         <FormContent>
           <FormText>E-mail</FormText>
-          <InputElement type="text" />
+          <InputElement
+            onChange={e => handleChange(e)}
+            type="text"
+            name="email"
+          />
         </FormContent>
         <FormContent>
           <FormText>Celular</FormText>
-          <InputElement type="text" />
+          <InputElement
+            onChange={e => handleChange(e)}
+            type="text"
+            name="cellphone"
+          />
         </FormContent>
         <FormContent>
           <FormText>Data de Nascimento</FormText>
-          <InputElement type="text" />
+          <InputElement
+            onChange={e => handleChange(e)}
+            type="text"
+            name="birthdate"
+          />
         </FormContent>
         <FormContent>
           <FormText>RG</FormText>
-          <InputElement type="text" />
+          <InputElement onChange={e => handleChange(e)} type="text" name="id" />
         </FormContent>
         <FormContent>
           <FormText>Quantidade</FormText>
-          <InputElement type="text" />
+          <InputElement
+            onChange={e => handleChange(e)}
+            type="text"
+            name="amount"
+          />
         </FormContent>
         <FormContent>
           <Button

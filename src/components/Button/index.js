@@ -1,21 +1,5 @@
 import React from "react";
 import { Container } from "./styles";
-import { connect } from "react-redux";
-import * as formActions from "../../store/reducers/actions/form";
-
-// function showForm(form) {
-//   if (form.disabled == true) {
-//     return {
-//       type: "SHOW_FORM",
-//       disabled: false
-//     };
-//   } else {
-//     return {
-//       type: "TOGGLE_FORM",
-//       disabled: true
-//     };
-//   }
-// }
 
 const Button = ({
   bRadius,
@@ -24,9 +8,7 @@ const Button = ({
   width,
   disabled,
   bThickness,
-  onClick,
-  form,
-  dispatch
+  onClick
 }) => (
   <Container
     bRadius={bRadius}
@@ -39,4 +21,4 @@ const Button = ({
     {children}
   </Container>
 );
-export default connect(state => ({ form: state.form }))(Button);
+export default Button;

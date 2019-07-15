@@ -1,5 +1,5 @@
 export function showForm(form) {
-  if (form.disabled == true) {
+  if (form.disabled === true) {
     return {
       type: "SHOW_FORM",
       disabled: false
