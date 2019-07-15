@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../components/Button";
 import { colors, metrics } from "../../global/index";
-import * as formActions from "../../store/reducers/actions/form";
+import * as formActions from "../../store/actions/form";
 import { connect } from "react-redux";
 import {
   Container,
@@ -25,13 +25,13 @@ const TicketsBox = ({
 }) => (
   <Container>
     <TicketLot>
-      <LotType>{lot}</LotType>
-      <TicketTotal>{tickets}</TicketTotal>
+      <LotType disabled={disabled}>{lot}</LotType>
+      <TicketTotal disabled={disabled}>{tickets}</TicketTotal>
     </TicketLot>
     <PriceBox>
       <Price>
-        <PriceCurrency>{currency}</PriceCurrency>
-        <PriceTotal>{price}</PriceTotal>
+        <PriceCurrency disabled={disabled}>{currency}</PriceCurrency>
+        <PriceTotal disabled={disabled}>{price}</PriceTotal>
       </Price>
     </PriceBox>
     <Button

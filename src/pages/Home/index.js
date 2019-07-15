@@ -13,18 +13,6 @@ import Button from "../../components/Button";
 import { Provider } from "react-redux";
 
 export default class Home extends Component {
-  state = {
-    hidden: true,
-    button: Button
-  };
-  constructor(props) {
-    super(props);
-
-    // Bind the function to this component, so it has access to this.state
-    this.handleClick = this.handleClick.bind(this);
-  }
-  componentDidMount() {}
-  handleClick = () => {};
   render() {
     return (
       <Provider store={store}>
@@ -33,8 +21,8 @@ export default class Home extends Component {
           <Form />
           <TicketReturn />
           <Header />
-          <Guests />
           <ThemesAndSpeakers />
+          <Guests />
           <Tickets />
           <Footer />
         </Container>

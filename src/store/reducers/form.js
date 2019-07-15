@@ -1,11 +1,5 @@
 const INITIAL_STATE = {
-  disabled: true,
-  name: "",
-  email: "",
-  cellphone: "",
-  birthdate: "",
-  id: "",
-  amount: null
+  disabled: true
 };
 
 export default function form(state = INITIAL_STATE, action) {
@@ -25,12 +19,12 @@ export default function form(state = INITIAL_STATE, action) {
         disabled: true,
         active: false
       };
-    case "SET_DATA":
-      console.log(state.name);
-      return {
-        ...state,
-        ...action.payload
-      };
+    // case "SET_DATA":
+    //   console.log(state);
+    //   return {
+    //     ...state,
+    //     ...action.payload
+    //   };
     default:
       return state;
   }

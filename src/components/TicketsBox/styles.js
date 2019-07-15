@@ -24,7 +24,7 @@ export const TicketLot = styled.div`
 export const LotType = styled.h3`
   font-family: "Oswald", sans-serif;
   font-size: ${metrics.fonts.xxlarge};
-  color: ${colors.lightred};
+  color: ${props => (props.disabled ? colors.gray : colors.lightred)};
   font-weight: 700;
   letter-spacing: 6.4px;
   text-transform: uppercase;
@@ -32,7 +32,7 @@ export const LotType = styled.h3`
 
 export const TicketTotal = styled.p`
   font-size: ${metrics.fonts.medium};
-  color: ${colors.lightred};
+  color: ${props => (props.disabled ? colors.gray : colors.lightred)};
   font-family: "Asap", sans-serif;
   letter-spacing: 1.6px;
   font-weight: 400;
@@ -49,7 +49,7 @@ export const PriceBox = styled.div`
 export const PriceCurrency = styled.p`
   font-size: 19px;
   letter-spacing: 2px;
-  color: ${colors.green};
+  color: ${props => (props.disabled ? colors.gray : colors.green)};
   font-weight: bold;
   font-family: "Asap", sans-serif;
   position: relative;
@@ -67,12 +67,12 @@ export const Price = styled.div`
   display: flex;
 `;
 
-export const PriceTotal = ({ children }) => {
+export const PriceTotal = ({ children, disabled }) => {
   const price = children.split(",");
   return (
     <>
-      <PriceValue>{price[0]}</PriceValue>
-      <Cents>,{price[1]}</Cents>
+      <PriceValue disabled={disabled}>{price[0]}</PriceValue>
+      <Cents disabled={disabled}>,{price[1]}</Cents>
     </>
   );
 };

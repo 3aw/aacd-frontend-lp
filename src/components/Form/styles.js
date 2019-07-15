@@ -11,7 +11,7 @@ export const Container = styled.div`
   background: ${colors.white};
   position: fixed;
   left: ${props => (props.disabled ? "-100%" : "0")};
-  transition: left 1s;
+  transition: left 0.7s;
   z-index: 999;
 `;
 // item
