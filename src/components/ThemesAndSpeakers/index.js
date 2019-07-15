@@ -4,8 +4,6 @@ import { Container, Title, SpeakerContainer } from "./styles";
 import { colors, metrics } from "../../global/index";
 import { Wrapper } from "../../global/globalStyle";
 import { connect } from "react-redux";
-import Button from "../../components/Button";
-import * as formActions from "../../store/reducers/actions/form";
 
 const ThemesAndSpeakers = ({ form, speakers, dispatch }) => (
   <Container>
@@ -23,15 +21,6 @@ const ThemesAndSpeakers = ({ form, speakers, dispatch }) => (
           />
         ))}
       </SpeakerContainer>
-      <Button
-        width={460}
-        backgroundColor={colors.white}
-        bThickness={4}
-        bRadius={metrics.borderRadius.round}
-        onClick={() => dispatch(formActions.showForm(form))}
-      >
-        Clique para se inscrever!
-      </Button>
     </Wrapper>
   </Container>
 );

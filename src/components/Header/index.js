@@ -8,7 +8,8 @@ import {
   HeaderBox,
   TitleBox,
   Text,
-  Info
+  Info,
+  EventInfo
 } from "./styles";
 import { colors, metrics } from "../../global";
 import { connect } from "react-redux";
@@ -20,6 +21,7 @@ const Header = ({ form, dispatch }) => (
     <HeaderBox>
       <ImpactarLogo src={Logo} />
       <TitleBox />
+      <EventInfo />
       <Text>
         Reunimos personalidades e profissionais conceituados em diversas áreas
         para abordar temas e histórias impactantes, assim como os exemplos de
@@ -28,10 +30,10 @@ const Header = ({ form, dispatch }) => (
       </Text>
       <Info />
       <Button
-        width={370}
+        width={530}
         backgroundColor={colors.lightblue}
         bRadius={metrics.borderRadius.round}
-        bThickness={4}
+        bThickness={2}
         onClick={() => dispatch(formActions.showForm(form))}
       >
         Clique para se inscrever!

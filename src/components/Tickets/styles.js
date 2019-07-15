@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../images/Backgrounds/bg-tickets.png";
+import bg from "../../images/bgtickets.png";
 import React from "react";
 import { colors, metrics } from "../../global/index";
 

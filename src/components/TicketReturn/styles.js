@@ -65,7 +65,7 @@ export const FloatingBox = props => (
     </TextWrap>
     <Button
       width={240}
-      bThickness={4}
+      bThickness={2}
       bRadius={metrics.borderRadius.round}
       backgroundColor={colors.white}
       onClick={props.onClick}

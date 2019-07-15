@@ -108,9 +108,9 @@ export class Form extends Component {
             <FormContent>
               <Button
                 width={"100%"}
-                bThickness={4}
+                bThickness={2}
                 backgroundColor={"#fff"}
-                bRadius={"none"}
+                bRadius={"32px"}
                 onClick={() => dispatch(formActions.formSubmit())}
               >
                 Comprar!

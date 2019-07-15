@@ -32,10 +32,9 @@ export const TitleContainer = styled.div`
 
 export const Text = styled.p`
   font-family: "Asap", sans-serif;
-  font-size: ${metrics.fonts.regular};
+  font-size: ${metrics.fonts.medium};
   font-weight: 400;
   color: ${colors.darkgreen};
-  margin-top: 20px;
   padding-right: 28%;
 `;
 
@@ -51,7 +50,7 @@ export const InfoBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 30px;
-  width: 80%;
+  width: 67%;
   margin-bottom: 60px;
 `;
 export const TextBox = styled.div`
@@ -64,6 +63,55 @@ export const Income = styled.img`
   width: 52px;
   height: 76px;
 `;
+export const EventInfoContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  padding: 10px 0 20px;
+`;
+export const InfoDate = styled.div`
+  width: ${props => props.width}%;
+`;
+export const DateItem = styled.p`
+  font-size: ${metrics.fonts.Title};
+  font-family: "Oswald";
+  font-weight: 300;
+  color: ${colors.green};
+  text-transform: uppercase;
+`;
+
+export const EventInfoText = styled(DateItem)`
+  font-size: ${metrics.fonts.medium};
+  color: ${colors.lightred};
+  letter-spacing: 3.2px;
+`;
+
+export const EventInfoHour = styled(EventInfoText)`
+  font-size: ${metrics.fonts.xlarge};
+  color: ${colors.green};
+  font-family: "Asap", sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  white-space: nowrap;
+  letter-spacing: 0;
+`;
+
+export const EventInfo = () => (
+  <EventInfoContainer>
+    <InfoDate width={30}>
+      <DateItem>01.out.19</DateItem>
+    </InfoDate>
+    <InfoDate width={25}>
+      <EventInfoText>Credenciamento</EventInfoText>
+      <EventInfoHour>18:30h</EventInfoHour>
+    </InfoDate>
+    <InfoDate width={30}>
+      <EventInfoText>Evento</EventInfoText>
+      <EventInfoHour>19h até as 23h</EventInfoHour>
+    </InfoDate>
+  </EventInfoContainer>
+);
 
 export const TitleBox = () => (
   <TitleContainer>

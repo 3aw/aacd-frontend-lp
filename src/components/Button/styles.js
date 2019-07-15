@@ -7,7 +7,6 @@ export const BorderWrap = styled.div`
   background: linear-gradient(to right, #d26a35, #e6ad2f);
   border-radius: ${props => props.bRadius};
   padding: ${props => props.bThickness}px;
-  height: fit-content;
 `;
 
 export const Button = styled.button`
@@ -15,7 +14,7 @@ export const Button = styled.button`
   border-radius: ${props => props.bRadius};
   text-align: center;
   font-family: "Asap", sans-serif;
-  padding: 10px 0;
+  padding: 20px 0;
   font-weight: "400";
   text-transform: uppercase;
   font-size: ${metrics.fonts.regular};

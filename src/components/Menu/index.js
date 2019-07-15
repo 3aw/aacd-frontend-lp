@@ -39,7 +39,7 @@ class Menu extends Component {
           disabled={false}
           width={435}
           backgroundColor={colors.white}
-          bThickness={4}
+          bThickness={2}
           bRadius={metrics.borderRadius.round}
           onClick={() => dispatch(formActions.showForm(form))}
         >
