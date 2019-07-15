@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "../../components/Button";
 import { colors, metrics } from "../../global/index";
-
+import * as formActions from "../../store/reducers/actions/form";
+import { connect } from "react-redux";
 import {
   Container,
   TicketLot,
@@ -13,16 +14,24 @@ import {
   PriceTotal
 } from "./styles";
 
-const TicketsBox = props => (
+const TicketsBox = ({
+  disabled,
+  lot,
+  tickets,
+  currency,
+  price,
+  form,
+  dispatch
+}) => (
   <Container>
     <TicketLot>
-      <LotType>{props.lot}</LotType>
-      <TicketTotal>{props.tickets}</TicketTotal>
+      <LotType>{lot}</LotType>
+      <TicketTotal>{tickets}</TicketTotal>
     </TicketLot>
     <PriceBox>
       <Price>
-        <PriceCurrency>{props.currency}</PriceCurrency>
-        <PriceTotal>{props.price}</PriceTotal>
+        <PriceCurrency>{currency}</PriceCurrency>
+        <PriceTotal>{price}</PriceTotal>
       </Price>
     </PriceBox>
     <Button
@@ -30,11 +39,12 @@ const TicketsBox = props => (
       bRadius={metrics.borderRadius.square}
       backgroundColor={colors.white}
       bThickness={2}
-      disabled={props.disabled}
+      disabled={disabled}
+      onClick={() => dispatch(formActions.showForm(form))}
     >
       Comprar
     </Button>
   </Container>
 );
 
-export default TicketsBox;
+export default connect(state => ({ form: state.form }))(TicketsBox);
