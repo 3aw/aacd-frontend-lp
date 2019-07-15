@@ -11,3 +11,13 @@ export function showForm(form) {
     };
   }
 }
+
+export function formSubmit() {
+  return {
+    type: "SHOW_CONFIRMATION"
+  };
+}
+
+export function toggleAll() {
+  return { type: "TOGGLE_ALL" };
+}

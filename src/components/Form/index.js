@@ -47,6 +47,7 @@ const Form = ({ form, dispatch }) => (
             bThickness={4}
             backgroundColor={"#fff"}
             bRadius={"none"}
+            onClick={() => dispatch(formActions.formSubmit(form))}
           >
             Comprar!
           </Button>

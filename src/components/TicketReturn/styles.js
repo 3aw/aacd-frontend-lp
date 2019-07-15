@@ -8,8 +8,9 @@ export const Container = styled.div`
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
   height: 100vh;
-  position: relative;
+  position: fixed;
   z-index: 9999;
+  display: ${props => (props.active ? "block" : "none")};
 `;
 
 export const Box = styled.div`
@@ -51,7 +52,7 @@ export const TextWrap = styled.div`
   flex-direction: column;
 `;
 
-export const FloatingBox = () => (
+export const FloatingBox = props => (
   <Box>
     <Image src={Logo} />
     <TextWrap>
@@ -67,6 +68,7 @@ export const FloatingBox = () => (
       bThickness={4}
       bRadius={metrics.borderRadius.round}
       backgroundColor={colors.white}
+      onClick={props.onClick}
     >
       fechar
     </Button>

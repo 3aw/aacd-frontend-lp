@@ -6,7 +6,7 @@ import ThemesAndSpeakers from "../../components/ThemesAndSpeakers";
 import Tickets from "../../components/Tickets";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
-// import TicketReturn from "../../components/TicketReturn/index";
+import TicketReturn from "../../components/TicketReturn/index";
 import store from "../../store";
 import Menu from "../../components/Menu";
 import Button from "../../components/Button";
@@ -31,6 +31,7 @@ export default class Home extends Component {
         <Container>
           <Menu />
           <Form />
+          <TicketReturn />
           <Header />
           <Guests />
           <ThemesAndSpeakers />
