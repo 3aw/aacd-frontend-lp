@@ -9,8 +9,8 @@ import Form from "../../components/Form";
 import TicketReturn from "../../components/TicketReturn/index";
 import store from "../../store";
 import Menu from "../../components/Menu";
-import Button from "../../components/Button";
 import { Provider } from "react-redux";
+import Location from "../../components/Location";
 
 export default class Home extends Component {
   render() {
@@ -24,6 +24,7 @@ export default class Home extends Component {
           <ThemesAndSpeakers />
           <Guests />
           <Tickets />
+          <Location />
           <Footer />
         </Container>
       </Provider>

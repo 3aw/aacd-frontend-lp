@@ -21,7 +21,6 @@ const Tickets = ({ tickets, dispatch }) => (
         ))}
       </TicketsContainer>
     </Wrapper>
-    <FloatingBox />
   </Container>
 );
 
