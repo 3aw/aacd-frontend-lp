@@ -19,26 +19,21 @@ export class Form extends Component {
     cellphone: "",
     birthdate: "",
     id: "",
-    amount: null
+    amount: ""
   };
   handleSubmit = e => {
+    const { dispatch } = this.props;
     e.preventDefault();
-    return {
-      type: "SHOW_CONFIRMATION"
-    };
+    this.handleValidation(dispatch);
   };
-  //   validation = () => {
-  //     const { dispatch } = this.props;
-  //     let { email } = this.state.email;
-  //     if ((this.state.name = "")) {
-  //       alert("preencha o nome");
-  //     } else if ((email = "")) {
-  //       alert("preencha o e-mail");
-  //     }
-  //     //  else {
-  //     //   dispatch(formActions.formSubmit());
-  //     // }
-  //   };
+  handleValidation = dispatch => {
+    let { name } = this.state;
+    if (name == "") {
+      console.log("teste");
+    } else {
+      dispatch(formActions.formSubmit());
+    }
+  };
 
   handleQtd = e => {
     e.preventDefault();
@@ -111,7 +106,6 @@ export class Form extends Component {
                 bThickness={2}
                 backgroundColor={"#fff"}
                 bRadius={"32px"}
-                onClick={() => dispatch(formActions.formSubmit())}
               >
                 Comprar!
               </Button>
