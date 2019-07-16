@@ -23,7 +23,7 @@ const Guests = ({ form, guests, dispatch }) => (
     <Button
       width={460}
       backgroundColor={colors.white}
-      bThickness={2}
+      bThickness={5}
       bRadius={metrics.borderRadius.round}
       onClick={() => dispatch(formActions.showForm(form))}
     >

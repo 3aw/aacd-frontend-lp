@@ -10,7 +10,7 @@ export default {
     Title: "48px"
   },
   borderRadius: {
-    round: "32px",
+    round: "36px",
     square: "8px",
     soft: "4px"
   }
