@@ -19,7 +19,7 @@ export class Form extends Component {
     cellphone: "",
     birthdate: "",
     id: "",
-    amount: ""
+    amount: null
   };
   handleSubmit = e => {
     const { dispatch } = this.props;
@@ -27,9 +27,19 @@ export class Form extends Component {
     this.handleValidation(dispatch);
   };
   handleValidation = dispatch => {
-    let { name } = this.state;
-    if (name == "") {
-      console.log("teste");
+    let { name, email, cellphone, birthdate, id, amount } = this.state;
+    if (name === "") {
+      console.log("Nome Vazio");
+    } else if (email === "") {
+      console.log("E-mail Vazio");
+    } else if (cellphone === "") {
+      console.log("Celular Vazio");
+    } else if (birthdate === "") {
+      console.log("Data de Nascimento Vazio");
+    } else if (id === "") {
+      console.log("ID Vazio");
+    } else if (amount === null) {
+      console.log("Qtd Vazio");
     } else {
       dispatch(formActions.formSubmit());
     }

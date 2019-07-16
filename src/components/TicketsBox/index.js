@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../components/Button";
 import { colors, metrics } from "../../global/index";
-import * as formActions from "../../store/actions/form";
+import * as formActions from "../../store/reducers/actions/form";
 import { connect } from "react-redux";
 import {
   Container,
