@@ -1,7 +1,6 @@
 import React from "react";
 import SpeakerBox from "../../components/SpeakerBox";
 import { Container, Title, SpeakerContainer } from "./styles";
-import { colors, metrics } from "../../global/index";
 import { Wrapper } from "../../global/globalStyle";
 import { connect } from "react-redux";
 

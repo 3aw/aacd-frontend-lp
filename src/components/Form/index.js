@@ -29,12 +29,11 @@ export class Form extends Component {
   };
   handleValidation = dispatch => {
     let { name, email, cellphone, birthdate, id, amount } = this.state;
+    this.setState({ formIsValid: false });
     if (name === "") {
       console.log("Nome Vazio");
-      this.state.formIsValid = false;
     } else if (email === "") {
       console.log("E-mail Vazio");
-      this.state.formIsValid = false;
     } else if (cellphone === "") {
       console.log("Celular Vazio");
     } else if (birthdate === "") {
@@ -63,7 +62,7 @@ export class Form extends Component {
       <Container disabled={form.disabled}>
         <Box>
           <FormContainer onSubmit={this.handleSubmit}>
-            <TitleBar onClick={() => dispatch(formActions.showForm(form))} />
+            <TitleBar onClick={() => dispatch(formActions.toggleAll(form))} />
             <FormContent>
               <FormText>Nome</FormText>
               <InputElement

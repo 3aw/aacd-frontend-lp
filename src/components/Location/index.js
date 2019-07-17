@@ -3,7 +3,7 @@ import { Container, FloatingBox } from "./styles";
 
 const Location = () => (
   <Container>
-    <FloatingBox>teste</FloatingBox>
+    <FloatingBox />
   </Container>
 );
 

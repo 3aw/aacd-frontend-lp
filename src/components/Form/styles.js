@@ -28,7 +28,7 @@ export const Box = styled.div`
   }
 `;
 
-export const Cancel = styled.button`
+export const Cancel = styled.div`
   background: none;
   border: none;
   color: ${colors.lightred};

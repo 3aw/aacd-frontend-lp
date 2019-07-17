@@ -1,6 +1,6 @@
 import React from "react";
 import { Wrapper } from "../../global/globalStyle";
-import { Container, Title, TicketsContainer, FloatingBox } from "./styles";
+import { Container, Title, TicketsContainer } from "./styles";
 import TicketsBox from "../../components/TicketsBox";
 import { connect } from "react-redux";
 
