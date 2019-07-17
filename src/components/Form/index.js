@@ -126,7 +126,6 @@ export class Form extends Component {
             </FormContent>
           </FormContainer>
         </Box>
-        <Box />
       </Container>
     );
   }

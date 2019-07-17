@@ -15,7 +15,7 @@ export const BoxBackground = styled.div`
   height: 120px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 2px;
   border-radius: ${metrics.borderRadius.soft};
   bottom: -65px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.7);

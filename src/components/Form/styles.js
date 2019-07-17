@@ -7,25 +7,19 @@ import { colors, metrics } from "../../global/index";
 export const Container = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
   background: ${colors.white};
   position: fixed;
   left: ${props => (props.disabled ? "-100%" : "0")};
   transition: left 0.7s;
   z-index: 999;
+  justify-content: center;
+  background-image: url(${formbg});
+  background-repeat: no-repeat;
+  background-position: top left;
 `;
 // item
 export const Box = styled.div`
   width: 50%;
-  background: url(${formbg});
-  background-repeat: no-repeat;
-  background-position: top left;
-  :last-child {
-    background: url(${girlbg});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-  }
 `;
 
 export const Cancel = styled.div`
