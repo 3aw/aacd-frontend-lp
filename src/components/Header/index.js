@@ -35,6 +35,7 @@ const Header = ({ form, dispatch }) => (
         bRadius={metrics.borderRadius.round}
         bThickness={2}
         onClick={() => dispatch(formActions.showForm(form))}
+        height={20}
       >
         Clique para se inscrever!
       </Button>

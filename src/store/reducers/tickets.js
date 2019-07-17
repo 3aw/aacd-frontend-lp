@@ -5,7 +5,8 @@ const INITIAL_STATE = [
     total: "40 ingressos",
     currency: "R$",
     price: "300,00",
-    disabled: true
+    disabled: true,
+    value: "Esgotado!"
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ const INITIAL_STATE = [
     total: "220 ingressos",
     currency: "R$",
     price: "400,00",
-    disabled: false
+    disabled: false,
+    value: "Comprar!"
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ const INITIAL_STATE = [
     total: "220 ingressos",
     currency: "R$",
     price: "450,00",
-    disabled: false
+    disabled: false,
+    value: "Aguarde"
   }
 ];
 export default function tickets(state = INITIAL_STATE, action) {

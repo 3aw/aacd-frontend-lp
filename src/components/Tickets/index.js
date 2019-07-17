@@ -17,6 +17,7 @@ const Tickets = ({ tickets, dispatch }) => (
             tickets={ticket.total}
             currency={ticket.currency}
             price={ticket.price}
+            value={ticket.value}
           />
         ))}
       </TicketsContainer>

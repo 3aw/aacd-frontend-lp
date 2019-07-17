@@ -26,6 +26,7 @@ const Guests = ({ form, guests, dispatch }) => (
       bThickness={5}
       bRadius={metrics.borderRadius.round}
       onClick={() => dispatch(formActions.showForm(form))}
+      height={10}
     >
       Clique para se inscrever!
     </Button>

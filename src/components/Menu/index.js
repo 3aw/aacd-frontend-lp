@@ -42,6 +42,7 @@ class Menu extends Component {
           bThickness={2}
           bRadius={metrics.borderRadius.round}
           onClick={() => dispatch(formActions.showForm(form))}
+          height={20}
         >
           Clique para se inscrever!
         </Button>

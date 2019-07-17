@@ -8,7 +8,8 @@ const Button = ({
   width,
   disabled,
   bThickness,
-  onClick
+  onClick,
+  height
 }) => (
   <Container
     bRadius={bRadius}
@@ -17,6 +18,7 @@ const Button = ({
     disabled={disabled}
     bThickness={bThickness}
     onClick={onClick}
+    height={height}
   >
     {children}
   </Container>

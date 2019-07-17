@@ -21,6 +21,7 @@ const TicketsBox = ({
   currency,
   price,
   form,
+  value,
   dispatch
 }) => (
   <Container>
@@ -40,9 +41,10 @@ const TicketsBox = ({
       backgroundColor={colors.white}
       bThickness={2}
       disabled={disabled}
+      height={5}
       onClick={() => dispatch(formActions.showForm(form))}
     >
-      Comprar
+      {value}
     </Button>
   </Container>
 );
