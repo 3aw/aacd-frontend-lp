@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "./styles";
-import { connect } from "react-redux";
 
 const Button = ({
   bRadius,
@@ -10,8 +9,7 @@ const Button = ({
   disabled,
   bThickness,
   onClick,
-  form,
-  dispatch
+  height
 }) => (
   <Container
     bRadius={bRadius}
@@ -20,8 +18,9 @@ const Button = ({
     disabled={disabled}
     bThickness={bThickness}
     onClick={onClick}
+    height={height}
   >
     {children}
   </Container>
 );
-export default connect(state => ({ form: state }))(Button);
+export default Button;

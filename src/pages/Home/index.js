@@ -6,35 +6,25 @@ import ThemesAndSpeakers from "../../components/ThemesAndSpeakers";
 import Tickets from "../../components/Tickets";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
-// import TicketReturn from "../../components/TicketReturn/index";
+import TicketReturn from "../../components/TicketReturn/index";
 import store from "../../store";
 import Menu from "../../components/Menu";
-import Button from "../../components/Button";
 import { Provider } from "react-redux";
+import Location from "../../components/Location";
 
 export default class Home extends Component {
-  state = {
-    hidden: true,
-    button: Button
-  };
-  constructor(props) {
-    super(props);
-
-    // Bind the function to this component, so it has access to this.state
-    this.handleClick = this.handleClick.bind(this);
-  }
-  componentDidMount() {}
-  handleClick = () => {};
   render() {
     return (
       <Provider store={store}>
         <Container>
           <Menu />
           <Form />
+          <TicketReturn />
           <Header />
-          <Guests />
           <ThemesAndSpeakers />
+          <Guests />
           <Tickets />
+          <Location />
           <Footer />
         </Container>
       </Provider>

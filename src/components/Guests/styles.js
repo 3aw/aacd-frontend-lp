@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 `;
 
 export const TitleBox = styled.div`
@@ -33,6 +33,7 @@ export const GuestsContainer = styled.div`
   min-height: 720px;
   align-items: space-between;
   justify-content: space-evenly;
+  margin-bottom: 80px;
 `;
 
 export const Title = () => (

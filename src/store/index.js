@@ -1,25 +1,6 @@
 import { createStore } from "redux";
+import rootReducer from "./reducers";
 
-const INITIAL_STATE = {
-  form: {
-    disabled: true,
-    name: "",
-    email: "",
-    celphone: "",
-    birthdate: "",
-    id: "",
-    amount: null
-  },
-  menu: {
-    hidden: true
-  }
-};
-
-function reducer(state = INITIAL_STATE, action) {
-  console.log(state);
-  return state;
-}
-
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 export default store;

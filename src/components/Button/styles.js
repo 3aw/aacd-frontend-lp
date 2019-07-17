@@ -7,7 +7,6 @@ export const BorderWrap = styled.div`
   background: linear-gradient(to right, #d26a35, #e6ad2f);
   border-radius: ${props => props.bRadius};
   padding: ${props => props.bThickness}px;
-  height: fit-content;
 `;
 
 export const Button = styled.button`
@@ -15,7 +14,7 @@ export const Button = styled.button`
   border-radius: ${props => props.bRadius};
   text-align: center;
   font-family: "Asap", sans-serif;
-  padding: 10px 0;
+  padding: ${props => props.height}px 0px;
   font-weight: "400";
   text-transform: uppercase;
   font-size: ${metrics.fonts.regular};
@@ -47,17 +46,23 @@ export const Container = ({
   bRadius,
   disabled,
   bThickness,
-  onClick
+  onClick,
+  height
 }) =>
   disabled ? (
     <DisabledBorderWrap bThickness={bThickness} bRadius={bRadius} width={width}>
-      <DisabledButton bRadius={bRadius} backgroundColor={colors.white}>
+      <DisabledButton
+        height={height}
+        bRadius={bRadius}
+        backgroundColor={colors.white}
+      >
         {children}
       </DisabledButton>
     </DisabledBorderWrap>
   ) : (
     <BorderWrap bThickness={bThickness} bRadius={bRadius} width={width}>
       <Button
+        height={height}
         onClick={onClick}
         bRadius={bRadius}
         backgroundColor={backgroundColor}

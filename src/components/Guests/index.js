@@ -1,51 +1,38 @@
-import React, { Component } from "react";
+import React from "react";
 import GuestBox from "../GuestBox";
-import Guest from "../../images/Guests/bobfloriano.png";
-
 import { Container, Title, GuestsContainer } from "./styles";
+import { colors, metrics } from "../../global/index";
+import { connect } from "react-redux";
+import Button from "../Button/";
+import * as formActions from "../../store/reducers/actions/form";
 
-export default class Guests extends Component {
-  state = {
-    guests: [
-      {
-        id: 1,
-        image: Guest,
-        function: "Mestre de Cerimônia",
-        name: "Bob Floriano",
-        ocupation: "Jornalista e Locutor"
-      },
-      {
-        id: 2,
-        image: Guest,
-        function: "Mediador",
-        name: "Cesar Tralli",
-        ocupation: "Jornalista da TV Globo"
-      },
-      {
-        id: 3,
-        image: Guest,
-        function: "coktail e poket show com",
-        name: "Sabrina parlatori",
-        ocupation: "Cantora e apresentadora"
-      }
-    ]
-  };
-  render() {
-    return (
-      <Container>
-        <Title />
-        <GuestsContainer>
-          {this.state.guests.map(guest => (
-            <GuestBox
-              key={guest.id}
-              image={guest.image}
-              function={guest.function}
-              name={guest.name}
-              ocupation={guest.ocupation}
-            />
-          ))}
-        </GuestsContainer>
-      </Container>
-    );
-  }
-}
+const Guests = ({ form, guests, dispatch }) => (
+  <Container>
+    <Title />
+    <GuestsContainer>
+      {guests.map(guest => (
+        <GuestBox
+          key={guest.id}
+          image={guest.image}
+          function={guest.function}
+          name={guest.name}
+          ocupation={guest.ocupation}
+        />
+      ))}
+    </GuestsContainer>
+    <Button
+      width={460}
+      backgroundColor={colors.white}
+      bThickness={5}
+      bRadius={metrics.borderRadius.round}
+      onClick={() => dispatch(formActions.showForm(form))}
+      height={10}
+    >
+      Clique para se inscrever!
+    </Button>
+  </Container>
+);
+
+export default connect(state => ({ form: state.form, guests: state.guests }))(
+  Guests
+);

@@ -13,7 +13,7 @@ export const Container = styled.div`
   z-index: 99;
   transform: ${props =>
     props.hidden ? "translateY(-200px)" : "translateY(0)"};
-  transition: transform 1s;
+  transition: transform 0.7s;
 `;
 
 export const ImageLogo = styled.img``;

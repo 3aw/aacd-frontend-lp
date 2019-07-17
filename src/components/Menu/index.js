@@ -3,16 +3,17 @@ import { Container, ImageLogo } from "./styles";
 import Button from "../Button";
 import Logo from "../../images/logosmall.png";
 import { colors, metrics } from "../../global/index";
+import { connect } from "react-redux";
+import * as formActions from "../../store/reducers/actions/form";
 
-export default class Menu extends Component {
+class Menu extends Component {
   state = {
     hidden: true
   };
-
   componentWillMount() {
     window.addEventListener("scroll", this.handleScroll);
   }
-
+  // form = useSelector(state => state.form);
   handleScroll = e => {
     if (navigator.userAgent.indexOf("Chrome") >= 0) {
       if (e.path[1].scrollY > 200) {
@@ -28,10 +29,9 @@ export default class Menu extends Component {
       }
     }
   };
-  handleClick = () => {
-    console.log("Testando");
-  };
   render() {
+    const { form } = this.props;
+    const { dispatch } = this.props;
     return (
       <Container hidden={this.state.hidden}>
         <ImageLogo src={Logo} />
@@ -39,9 +39,10 @@ export default class Menu extends Component {
           disabled={false}
           width={435}
           backgroundColor={colors.white}
-          bThickness={4}
+          bThickness={2}
           bRadius={metrics.borderRadius.round}
-          onClick={this.handleClick}
+          onClick={() => dispatch(formActions.showForm(form))}
+          height={20}
         >
           Clique para se inscrever!
         </Button>
@@ -49,3 +50,5 @@ export default class Menu extends Component {
     );
   }
 }
+
+export default connect(state => ({ form: state.form }))(Menu);
