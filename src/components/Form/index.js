@@ -19,7 +19,8 @@ export class Form extends Component {
     cellphone: "",
     birthdate: "",
     id: "",
-    amount: null
+    amount: null,
+    formIsValid: null
   };
   handleSubmit = e => {
     const { dispatch } = this.props;
@@ -30,8 +31,10 @@ export class Form extends Component {
     let { name, email, cellphone, birthdate, id, amount } = this.state;
     if (name === "") {
       console.log("Nome Vazio");
+      this.state.formIsValid = false;
     } else if (email === "") {
       console.log("E-mail Vazio");
+      this.state.formIsValid = false;
     } else if (cellphone === "") {
       console.log("Celular Vazio");
     } else if (birthdate === "") {
@@ -41,15 +44,17 @@ export class Form extends Component {
     } else if (amount === null) {
       console.log("Qtd Vazio");
     } else {
+      this.setState({ formIsValid: true });
       dispatch(formActions.formSubmit());
     }
   };
-
   handleQtd = e => {
     e.preventDefault();
   };
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+    this.setState({ formIsValid: false });
+    console.log(`Estado formIsValid: ${this.state.formIsValid}`);
   };
   render() {
     const { form } = this.props;
