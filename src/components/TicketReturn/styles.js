@@ -50,6 +50,15 @@ export const TextWrap = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-image: linear-gradient(
+    to right,
+    black 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: top;
+  background-size: 30px 5px;
+  background-repeat: repeat-x;
+  padding-top: 25px;
 `;
 
 export const FloatingBox = props => (
