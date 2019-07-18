@@ -20,7 +20,8 @@ export class Form extends Component {
     birthdate: "",
     id: "",
     amount: null,
-    formIsValid: null
+    formIsValid: null,
+    active: null
   };
   handleSubmit = e => {
     const { dispatch } = this.props;
@@ -55,7 +56,14 @@ export class Form extends Component {
     this.setState({ formIsValid: false });
     console.log(`Estado formIsValid: ${this.state.formIsValid}`);
   };
+  handleSelect = e => {
+    this.setState({ amount: e.target.value });
+    for (let i = 0; i < this.state.amount; i++) {
+      this.setState({ amount: [i] });
+    }
+  };
   render() {
+    console.log(this.state.amount);
     const { form } = this.props;
     const { dispatch } = this.props;
     return (
@@ -69,11 +77,13 @@ export class Form extends Component {
                 onChange={this.handleChange}
                 type="text"
                 name="name"
+                active={true}
               />
             </FormContent>
             <FormContent>
               <FormText>E-mail</FormText>
               <InputElement
+                active={true}
                 onChange={this.handleChange}
                 type="text"
                 name="email"
@@ -82,6 +92,7 @@ export class Form extends Component {
             <FormContent>
               <FormText>Celular</FormText>
               <InputElement
+                active={true}
                 onChange={this.handleChange}
                 type="text"
                 name="cellphone"
@@ -93,6 +104,7 @@ export class Form extends Component {
                 onChange={this.handleChange}
                 type="text"
                 name="birthdate"
+                active={true}
               />
             </FormContent>
             <FormContent>
@@ -101,18 +113,30 @@ export class Form extends Component {
                 onChange={this.handleChange}
                 type="text"
                 name="id"
+                active={true}
               />
             </FormContent>
             <FormContent>
               <FormText>Quantidade</FormText>
-              <InputElement
-                onKeyPress={this.handleQtd}
-                onChange={this.handleChange}
-                type="number"
-                name="amount"
-                min="1"
-                max="10"
-              />
+              <select name="amount" onChange={this.handleSelect}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">6</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </FormContent>
+            <FormContent>
+              {this.state.amount == null ? (
+                <InputElement active={false} name="name" type="text" />
+              ) : (
+                ""
+              )}
             </FormContent>
             <FormContent>
               <Button
@@ -132,3 +156,8 @@ export class Form extends Component {
 }
 
 export default connect(state => ({ form: state.form }))(Form);
+// (
+//   this.state.amount.map(each => (
+//     <InputElement active={false} name="name" type="text" />
+//   ))
+// )
