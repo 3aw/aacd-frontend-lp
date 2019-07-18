@@ -1,15 +1,7 @@
 import React, { Component } from "react";
 import { connect, useDispatch } from "react-redux";
 import Button from "../Button";
-import {
-  Container,
-  Box,
-  FormContainer,
-  TitleBar,
-  FormContent,
-  FormText,
-  InputElement
-} from "./styles";
+import { Container, Box, FormContainer, TitleBar, FormContent, FormText, InputElement } from "./styles";
 import * as formActions from "../../store/reducers/actions/form";
 
 export class Form extends Component {
@@ -21,7 +13,8 @@ export class Form extends Component {
     id: "",
     amount: null,
     formIsValid: null,
-    active: null
+    active: null,
+    form: []
   };
   handleSubmit = e => {
     const { dispatch } = this.props;
@@ -62,6 +55,11 @@ export class Form extends Component {
       this.setState({ amount: [i] });
     }
   };
+
+  newSubscriber = e => {
+    e.preventDefault();
+    this.setState({ form: [...this.state.form, <span>Novo</span>] });
+  };
   render() {
     console.log(this.state.amount);
     const { form } = this.props;
@@ -73,48 +71,23 @@ export class Form extends Component {
             <TitleBar onClick={() => dispatch(formActions.toggleAll(form))} />
             <FormContent>
               <FormText>Nome</FormText>
-              <InputElement
-                onChange={this.handleChange}
-                type="text"
-                name="name"
-                active={true}
-              />
+              <InputElement onChange={this.handleChange} type="text" name="name" active={true} />
             </FormContent>
             <FormContent>
               <FormText>E-mail</FormText>
-              <InputElement
-                active={true}
-                onChange={this.handleChange}
-                type="text"
-                name="email"
-              />
+              <InputElement active={true} onChange={this.handleChange} type="text" name="email" />
             </FormContent>
             <FormContent>
               <FormText>Celular</FormText>
-              <InputElement
-                active={true}
-                onChange={this.handleChange}
-                type="text"
-                name="cellphone"
-              />
+              <InputElement active={true} onChange={this.handleChange} type="text" name="cellphone" />
             </FormContent>
             <FormContent>
               <FormText>Data de Nascimento</FormText>
-              <InputElement
-                onChange={this.handleChange}
-                type="text"
-                name="birthdate"
-                active={true}
-              />
+              <InputElement onChange={this.handleChange} type="text" name="birthdate" active={true} />
             </FormContent>
             <FormContent>
               <FormText>RG</FormText>
-              <InputElement
-                onChange={this.handleChange}
-                type="text"
-                name="id"
-                active={true}
-              />
+              <InputElement onChange={this.handleChange} type="text" name="id" active={true} />
             </FormContent>
             <FormContent>
               <FormText>Quantidade</FormText>
@@ -131,20 +104,13 @@ export class Form extends Component {
                 <option value="10">10</option>
               </select>
             </FormContent>
+            <button type="button" onClick={this.newSubscriber}>
+              Adicionar participante
+            </button>
+            {this.state.form}
+            <FormContent>{this.state.amount == null ? <InputElement active={false} name="name" type="text" /> : ""}</FormContent>
             <FormContent>
-              {this.state.amount == null ? (
-                <InputElement active={false} name="name" type="text" />
-              ) : (
-                ""
-              )}
-            </FormContent>
-            <FormContent>
-              <Button
-                width={"100%"}
-                bThickness={2}
-                backgroundColor={"#fff"}
-                bRadius={"32px"}
-              >
+              <Button width={"100%"} bThickness={2} backgroundColor={"#fff"} bRadius={"32px"}>
                 Comprar!
               </Button>
             </FormContent>
