@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { colors, metrics } from "../../global/index";
 
 export const Container = styled.div`
-  width: 319px;
-  height: 330px;
+  width: 206px;
+  height: 260px;
   border-radius: ${metrics.borderRadius.square};
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 7px 0 rgba(93, 165, 165, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,23 +20,26 @@ export const Image = styled.img`
 export const Function = styled.p`
   font-family: "Oswald", sans-serif;
   font-weight: 300;
-  font-size: ${metrics.fonts.medium};
+  font-size: 14px;
   color: ${colors.red};
   text-transform: uppercase;
-  letter-spacing: 3.2px;
+  letter-spacing: 2.8px;
+  margin-bottom: 10px;
 `;
 
 export const Name = styled.h3`
   color: ${colors.darkgreen};
   font-family: "Asap", sans-serif;
   text-transform: uppercase;
-  font-size: ${metrics.fonts.xlarge};
+  font-size: ${metrics.fonts.large};
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
 `;
 
 export const Ocupation = styled.p`
   font-family: "Asap", sans-serif;
-  font-size: ${metrics.fonts.medium};
+  font-size: ${metrics.fonts.small};
   color: ${colors.lightred};
   font-weight: 400;
 `;

@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import { connect, useDispatch } from "react-redux";
 import Button from "../Button";
-import { Container, Box, FormContainer, TitleBar, FormContent, FormText, InputElement } from "./styles";
+import {
+  Container,
+  Box,
+  FormContainer,
+  TitleBar,
+  FormContent,
+  FormText,
+  InputElement
+} from "./styles";
 import * as formActions from "../../store/reducers/actions/form";
 
 export class Form extends Component {
@@ -71,23 +79,48 @@ export class Form extends Component {
             <TitleBar onClick={() => dispatch(formActions.toggleAll(form))} />
             <FormContent>
               <FormText>Nome</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="name" active={true} />
+              <InputElement
+                onChange={this.handleChange}
+                type="text"
+                name="name"
+                active={true}
+              />
             </FormContent>
             <FormContent>
               <FormText>E-mail</FormText>
-              <InputElement active={true} onChange={this.handleChange} type="text" name="email" />
+              <InputElement
+                active={true}
+                onChange={this.handleChange}
+                type="text"
+                name="email"
+              />
             </FormContent>
             <FormContent>
               <FormText>Celular</FormText>
-              <InputElement active={true} onChange={this.handleChange} type="text" name="cellphone" />
+              <InputElement
+                active={true}
+                onChange={this.handleChange}
+                type="text"
+                name="cellphone"
+              />
             </FormContent>
             <FormContent>
               <FormText>Data de Nascimento</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="birthdate" active={true} />
+              <InputElement
+                onChange={this.handleChange}
+                type="text"
+                name="birthdate"
+                active={true}
+              />
             </FormContent>
             <FormContent>
               <FormText>RG</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="id" active={true} />
+              <InputElement
+                onChange={this.handleChange}
+                type="text"
+                name="id"
+                active={true}
+              />
             </FormContent>
             <FormContent>
               <FormText>Quantidade</FormText>
@@ -108,9 +141,21 @@ export class Form extends Component {
               Adicionar participante
             </button>
             {this.state.form}
-            <FormContent>{this.state.amount == null ? <InputElement active={false} name="name" type="text" /> : ""}</FormContent>
             <FormContent>
-              <Button width={"100%"} bThickness={2} backgroundColor={"#fff"} bRadius={"32px"}>
+              {this.state.amount == null ? (
+                <InputElement active={false} name="name" type="text" />
+              ) : (
+                ""
+              )}
+            </FormContent>
+            <FormContent>
+              <Button
+                width={"100%"}
+                bThickness={2}
+                height={20}
+                backgroundColor={"#fff"}
+                bRadius={"32px"}
+              >
                 Comprar!
               </Button>
             </FormContent>
@@ -122,8 +167,3 @@ export class Form extends Component {
 }
 
 export default connect(state => ({ form: state.form }))(Form);
-// (
-//   this.state.amount.map(each => (
-//     <InputElement active={false} name="name" type="text" />
-//   ))
-// )

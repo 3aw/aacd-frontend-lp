@@ -69,9 +69,10 @@ export const EventInfoContainer = styled.div`
   align-items: center;
   width: 65%;
   padding: 10px 0 20px;
+  flex-wrap: wrap;
 `;
 export const InfoDate = styled.div`
-  width: ${props => props.width}%;
+  min-width: ${props => props.width}%;
 `;
 export const DateItem = styled.p`
   font-size: ${metrics.fonts.Title};
@@ -96,20 +97,34 @@ export const EventInfoHour = styled(EventInfoText)`
   white-space: nowrap;
   letter-spacing: 0;
 `;
+export const MobileWrapBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  @media screen and (max-width: 1450px) {
+    width: 65%;
+  }
+  @media screen and (max-width: 1350px) {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+`;
 
 export const EventInfo = () => (
   <EventInfoContainer>
     <InfoDate width={30}>
       <DateItem>01.out.19</DateItem>
     </InfoDate>
-    <InfoDate width={25}>
-      <EventInfoText>Credenciamento</EventInfoText>
-      <EventInfoHour>18:30h</EventInfoHour>
-    </InfoDate>
-    <InfoDate width={30}>
-      <EventInfoText>Evento</EventInfoText>
-      <EventInfoHour>19h até as 23h</EventInfoHour>
-    </InfoDate>
+    <MobileWrapBox>
+      <InfoDate width={60}>
+        <EventInfoText>Credenciamento</EventInfoText>
+        <EventInfoHour>18:30h</EventInfoHour>
+      </InfoDate>
+      <InfoDate width={40}>
+        <EventInfoText>Evento</EventInfoText>
+        <EventInfoHour>19h até as 23h</EventInfoHour>
+      </InfoDate>
+    </MobileWrapBox>
   </EventInfoContainer>
 );
 
