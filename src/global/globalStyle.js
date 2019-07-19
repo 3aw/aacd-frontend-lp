@@ -23,12 +23,11 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Wrapper = styled.div`
-  width: 1240px;
-  padding: 0 40px;
+  width: 1110px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 0 auto;
+
   position: relative;
   background: ${props => props.background};
 `;

@@ -48,6 +48,38 @@ const INITIAL_STATE = [
     theme: "Maestria",
     name: "Bernadinho",
     ocupation: "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
+  },
+  {
+    id: 7,
+    background: letterI,
+    image: Speaker,
+    theme: "Maestria",
+    name: "Bernadinho",
+    ocupation: "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
+  },
+  {
+    id: 8,
+    background: letterI,
+    image: Speaker,
+    theme: "Maestria",
+    name: "Bernadinho",
+    ocupation: "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
+  },
+  {
+    id: 9,
+    background: letterI,
+    image: Speaker,
+    theme: "Maestria",
+    name: "Bernadinho",
+    ocupation: "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
+  },
+  {
+    id: 10,
+    background: letterI,
+    image: Speaker,
+    theme: "Maestria",
+    name: "Bernadinho",
+    ocupation: "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
   }
 ];
 

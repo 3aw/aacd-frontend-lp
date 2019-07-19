@@ -14,6 +14,7 @@ export const Container = styled.div`
   background: url(${props => props.bg});
   background-repeat: no-repeat;
   margin-bottom: 60px;
+  margin-right: 15px;
 `;
 
 export const Image = styled.img``;

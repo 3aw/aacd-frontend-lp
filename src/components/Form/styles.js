@@ -85,7 +85,7 @@ export const InputElement = styled.input`
   width: 100%;
   padding: 15px 20px 10px;
   border: solid 2px #6f6f6f;
-  display: ${props => (props.active ? "block" : "none")}
+  display: ${props => (props.active ? "block" : "none")};
   font-family: "Asap", sans-serif;
   font-size: ${metrics.fonts.xmedium};
   :focus {
