@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  margin: 0 auto;
   position: relative;
   background: ${props => props.background};
 `;
