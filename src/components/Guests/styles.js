@@ -29,10 +29,9 @@ export const GuestsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 39%;
-  min-height: 720px;
+  width: 100%;
   align-items: space-between;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 80px;
 `;
 

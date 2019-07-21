@@ -3,10 +3,11 @@ import React from "react";
 import { colors, metrics } from "../../global/index";
 
 export const BorderWrap = styled.div`
-  width: ${props => props.width}px;
+  width: ${props => props.width}%;
   background: linear-gradient(to right, #d26a35, #e6ad2f);
   border-radius: ${props => props.bRadius};
   padding: ${props => props.bThickness}px;
+  min-width: 30%;
 `;
 
 export const Button = styled.button`
@@ -17,9 +18,10 @@ export const Button = styled.button`
   padding: ${props => props.height}px 0px;
   font-weight: "400";
   text-transform: uppercase;
-  font-size: ${metrics.fonts.regular};
+  font-size: 1.3vw;
   color: ${colors.orange};
   width: 100%;
+  letter-spacing: 2px;
   background: ${props => props.backgroundColor};
   cursor: pointer;
   &:hover {

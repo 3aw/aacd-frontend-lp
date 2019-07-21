@@ -30,7 +30,7 @@ const Header = ({ form, dispatch }) => (
       </Text>
       <Info />
       <Button
-        width={530}
+        width={60}
         backgroundColor={colors.lightblue}
         bRadius={metrics.borderRadius.round}
         bThickness={2}

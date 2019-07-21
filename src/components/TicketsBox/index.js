@@ -36,7 +36,7 @@ const TicketsBox = ({
       </Price>
     </PriceBox>
     <Button
-      width={165}
+      width={100}
       bRadius={metrics.borderRadius.square}
       backgroundColor={colors.white}
       bThickness={2}

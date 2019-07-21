@@ -14,6 +14,9 @@ export const HeaderBox = styled.header`
   width: 50%;
   padding-left: 55px;
   padding-top: 70px;
+  @media screen and (max-width: 1280px) {
+    width: 60%;
+  }
 `;
 
 export const Title = styled.h2`
@@ -40,7 +43,7 @@ export const Text = styled.p`
 
 export const InfoText = styled.p`
   font-family: "Oswald", sans-serif;
-  font-size: ${metrics.fonts.large};
+  font-size: 20px;
   color: ${colors.lightred};
   font-weight: 200;
   letter-spacing: 2.4px;
@@ -50,7 +53,7 @@ export const InfoBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 30px;
-  width: 67%;
+  width: 90%;
   margin-bottom: 60px;
 `;
 export const TextBox = styled.div`

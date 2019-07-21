@@ -37,7 +37,7 @@ class Menu extends Component {
         <ImageLogo src={Logo} />
         <Button
           disabled={false}
-          width={435}
+          width={30}
           backgroundColor={colors.white}
           bThickness={2}
           bRadius={metrics.borderRadius.round}
