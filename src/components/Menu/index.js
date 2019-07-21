@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, ImageLogo } from "./styles";
+import { Container, ImageLogo, WrapMobile } from "./styles";
 import Button from "../Button";
 import Logo from "../../images/logosmall.png";
 import { colors, metrics } from "../../global/index";
@@ -35,17 +35,19 @@ class Menu extends Component {
     return (
       <Container hidden={this.state.hidden}>
         <ImageLogo src={Logo} />
-        <Button
-          disabled={false}
-          width={30}
-          backgroundColor={colors.white}
-          bThickness={2}
-          bRadius={metrics.borderRadius.round}
-          onClick={() => dispatch(formActions.showForm(form))}
-          height={20}
-        >
-          Clique para se inscrever!
-        </Button>
+        <WrapMobile>
+          <Button
+            disabled={false}
+            width={30}
+            backgroundColor={colors.white}
+            bThickness={2}
+            bRadius={metrics.borderRadius.round}
+            onClick={() => dispatch(formActions.showForm(form))}
+            height={20}
+          >
+            Clique para se inscrever!
+          </Button>
+        </WrapMobile>
       </Container>
     );
   }

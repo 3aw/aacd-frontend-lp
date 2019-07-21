@@ -8,6 +8,9 @@ export const BorderWrap = styled.div`
   border-radius: ${props => props.bRadius};
   padding: ${props => props.bThickness}px;
   min-width: 30%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const Button = styled.button`

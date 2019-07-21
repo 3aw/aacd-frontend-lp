@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   background: ${colors.white};
   position: fixed;
-  left: ${props => (props.disabled ? "-100%" : "0")};
+  left: ${props => (props.disabled ? "-150%" : "0")};
   transition: left 0.7s;
   z-index: 999;
   justify-content: center;

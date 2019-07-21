@@ -2,20 +2,41 @@ import styled from "styled-components";
 import React from "react";
 import { colors, metrics } from "../../global/index";
 import IncomeLogo from "../../images/income.png";
+import bgmobile from "../../images/bgmobile.png";
 
 export const Container = styled.div`
   width: 100%;
   margin-bottom: 105px;
+  @media screen and (max-width: 1024px) {
+    background: #e7fffe;
+    padding-bottom: 50px;
+  }
 `;
 
-export const ImpactarLogo = styled.img``;
+export const ImpactarLogo = styled.img`
+  @media screen and (max-width: 1024px) {
+    align-self: center;
+  }
+`;
 
 export const HeaderBox = styled.header`
   width: 50%;
   padding-left: 55px;
+  position: relative;
   padding-top: 70px;
   @media screen and (max-width: 1280px) {
     width: 60%;
+  }
+  @media screen and (max-width: 1024px) {
+    background: url(${bgmobile});
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    width: 100%;
+    padding: 200px 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -31,6 +52,9 @@ export const Title = styled.h2`
 export const TitleContainer = styled.div`
   margin-top: 50px;
   line-height: 52px;
+  @media screen and (max-width: 1024px) {
+    order: 0;
+  }
 `;
 
 export const Text = styled.p`
@@ -39,6 +63,10 @@ export const Text = styled.p`
   font-weight: 400;
   color: ${colors.darkgreen};
   padding-right: 28%;
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+    color: #515151;
+  }
 `;
 
 export const InfoText = styled.p`
@@ -48,6 +76,8 @@ export const InfoText = styled.p`
   font-weight: 200;
   letter-spacing: 2.4px;
   text-transform: uppercase;
+  @media screen and (max-width: 1024px) {
+  }
 `;
 export const InfoBox = styled.div`
   display: flex;
@@ -65,6 +95,9 @@ export const Income = styled.img`
   align-self: center;
   width: 52px;
   height: 76px;
+  @media screen and (max-width: 1024px) {
+    align-self: center;
+  }
 `;
 export const EventInfoContainer = styled.div`
   display: flex;
@@ -73,6 +106,11 @@ export const EventInfoContainer = styled.div`
   width: 65%;
   padding: 10px 0 20px;
   flex-wrap: wrap;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 export const InfoDate = styled.div`
   min-width: ${props => props.width}%;
@@ -110,6 +148,10 @@ export const MobileWrapBox = styled.div`
   @media screen and (max-width: 1350px) {
     width: 70%;
     flex-wrap: wrap;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+    flex-direction: column;
   }
 `;
 
