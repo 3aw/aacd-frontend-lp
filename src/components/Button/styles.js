@@ -21,7 +21,7 @@ export const Button = styled.button`
   border-radius: ${props => props.bRadius};
   text-align: center;
   font-family: "Asap", sans-serif;
-  padding: ${props => props.height}px 0px;
+  padding: ${props => props.height}px 0;
   font-weight: "400";
   text-transform: uppercase;
   font-size: 1.3vw;
@@ -36,7 +36,7 @@ export const Button = styled.button`
   }
   @media screen and (max-width: 768px) {
     font-size: 14px;
-    padding: 18px;
+    padding: ${props => props.mheight}px 0;
   }
 `;
 export const DisabledBorderWrap = styled(BorderWrap)`
@@ -59,7 +59,8 @@ export const Container = ({
   disabled,
   bThickness,
   onClick,
-  height
+  height,
+  mheight
 }) =>
   disabled ? (
     <DisabledBorderWrap bThickness={bThickness} bRadius={bRadius} width={width}>
@@ -67,6 +68,7 @@ export const Container = ({
         height={height}
         bRadius={bRadius}
         backgroundColor={colors.white}
+        mheight={mheight}
       >
         {children}
       </DisabledButton>
@@ -78,6 +80,7 @@ export const Container = ({
         onClick={onClick}
         bRadius={bRadius}
         backgroundColor={backgroundColor}
+        mheight={mheight}
       >
         {children}
       </Button>

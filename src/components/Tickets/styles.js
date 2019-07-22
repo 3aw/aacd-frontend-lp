@@ -20,6 +20,20 @@ export const TitleBox = styled.div`
   margin: 60px 0;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    border: none;
+    flex-direction: column;
+    margin: 25px 0 0;
+    ::after {
+      display: block;
+      width: 50%;
+      background: #77b9b6;
+      height: 2px;
+      content: "";
+      margin: 0 auto;
+    }
+  }
 `;
 
 export const TitleText = styled.h2`
@@ -30,11 +44,19 @@ export const TitleText = styled.h2`
   letter-spacing: 9.6px;
   margin-bottom: 20px;
   white-space: nowrap;
+  @media screen and (max-width: 768px) {
+    white-space: normal;
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
 `;
 export const TicketsContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Title = () => (

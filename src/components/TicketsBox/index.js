@@ -43,6 +43,7 @@ const TicketsBox = ({
       disabled={disabled}
       height={5}
       onClick={() => dispatch(formActions.showForm(form))}
+      mheight={10}
     >
       {value}
     </Button>
