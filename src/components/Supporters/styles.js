@@ -9,12 +9,15 @@ import reboucas from "../../images/Sponsors/reboucas.png";
 import whirlpool from "../../images/Sponsors/whirlpool.png";
 
 export const Container = styled.div`
-  max-width: 100%;
+  min-width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 90px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 50px;
+  }
 `;
 
 export const TitleBox = styled.div`
@@ -22,6 +25,9 @@ export const TitleBox = styled.div`
   border-bottom: solid 2px ${colors.red};
   margin-bottom: 80px;
   width: 60%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const TitleText = styled.h2`
@@ -60,36 +66,54 @@ export const SupportersBox = styled(SponsorsBox)`
   width: ${props => props.width}%;
   justify-content: ${props => props.justify};
   align-items: center;
-  border-right: solid 2px ${colors.red};
   padding: 15px 0;
-  :last-child {
-    border: none;
+  @media screen and (max-width: 1024px) {
+    justify-content: ${props => props.mbjustify};
   }
 `;
 
-export const SponsorsText = () => (
-  <>
-    <SponsorsBox>
-      <SupportersText>Patrocínio</SupportersText>
-    </SponsorsBox>
-    <SponsorsBox>
-      <SupportersText>Apoio</SupportersText>
-    </SponsorsBox>
-  </>
-);
+export const ItemWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+`;
+export const Border = styled.div`
+  width: 2px;
+  height: 20px;
+  background-color: ${metrics.red};
+  position: absolute;
+`;
 
 export const Sponsors = () => (
   <>
-    <SupportersBox justify={"flex-start"} width={50}>
-      <SupportImage marginRight={94} src={whirlpool} />
-      <SupportImage src={consuladodamulher} />
-    </SupportersBox>
-    <SupportersBox justify={"space-between"} width={45}>
-      <SupportImage src={pufpuf} />
-      <SupportImage src={hiffman} />
-      <SupportImage src={bueno} />
-      <SupportImage src={reboucas} />
-    </SupportersBox>
+    <ItemWrap>
+      <SponsorsBox>
+        <SupportersText>Patrocínio</SupportersText>
+      </SponsorsBox>
+      <SupportersBox mbjustify={"center"} justify={"flex-start"} width={100}>
+        <SupportImage marginRight={94} src={whirlpool} />
+        <SupportImage src={consuladodamulher} />
+      </SupportersBox>
+    </ItemWrap>
+    <ItemWrap>
+      <SponsorsBox>
+        <SupportersText>Apoio</SupportersText>
+      </SponsorsBox>
+      <SupportersBox justify={"space-between"} width={100}>
+        <SupportImage src={pufpuf} />
+        <SupportImage src={hiffman} />
+        <SupportImage src={bueno} />
+        <SupportImage src={reboucas} />
+      </SupportersBox>
+    </ItemWrap>
   </>
 );
 
@@ -129,6 +153,10 @@ export const ContactsContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Box = styled.div`
@@ -138,6 +166,9 @@ export const Box = styled.div`
   flex-direction: column;
   justify-content: space-between;
   min-height: 130px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 50px;
+  }
 `;
 export const Item = styled.div`
   display: flex;

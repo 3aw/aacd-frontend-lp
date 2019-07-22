@@ -102,4 +102,7 @@ export const FormContainer = styled.form`
   height: 100vh;
   width: 100%;
   padding: 35px 70px 60px 170px;
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+  }
 `;

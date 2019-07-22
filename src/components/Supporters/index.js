@@ -4,7 +4,6 @@ import {
   Container,
   Title,
   SupportersContainer,
-  SponsorsText,
   Sponsors,
   ContactSection,
   Contacts
@@ -14,7 +13,6 @@ const Supporters = () => (
   <Container>
     <Title>conheça os patrocinadores do evento:</Title>
     <SupportersContainer>
-      <SponsorsText />
       <Sponsors />
     </SupportersContainer>
     <ContactSection />

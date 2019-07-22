@@ -7,6 +7,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 120px;
+  @media screen and (max-width: 1024px) {
+    padding: 0 40px;
+  }
 `;
 
 export const TitleBox = styled.div`

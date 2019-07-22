@@ -7,6 +7,10 @@ export const Container = styled.div`
   background: #fff;
   position: relative;
   height: 450px;
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;
 
 export const BoxBackground = styled.div`
@@ -21,6 +25,15 @@ export const BoxBackground = styled.div`
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.7);
   width: 600px;
   height: 260px;
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 export const Box = styled(BoxBackground)`
   background: ${colors.darkgreen};
@@ -32,6 +45,17 @@ export const Box = styled(BoxBackground)`
   height: 215px;
   justify-content: space-between;
   position: absolute;
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: center;
+    justify-self: center;
+    left: 0;
+  }
 `;
 export const Local = styled.p`
   font-family: "Oswald", sans-serif;
@@ -53,6 +77,9 @@ export const Map = styled.iframe`
   min-width: 100%;
   height: 100%;
   position: relative;
+  @media screen and (max-width: 1024px) {
+    min-height: 300px;
+  }
 `;
 export const MapAddres = styled.p`
   font-family: "Asap", sans-serif;

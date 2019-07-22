@@ -12,6 +12,9 @@ export const Container = styled.div`
   margin-right: 25px;
   justify-content: center;
   background: ${colors.white};
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+  }
 `;
 
 export const Image = styled.img`

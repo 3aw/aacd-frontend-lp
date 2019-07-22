@@ -15,6 +15,11 @@ export const Container = styled.div`
   background: ${colors.white};
   margin-right: 20px;
   padding: 20px;
+  @media screen and (max-width: 1024px) {
+    :last-child {
+      margin-right: 0;
+    }
+  }
 `;
 
 export const TicketLot = styled.div`
