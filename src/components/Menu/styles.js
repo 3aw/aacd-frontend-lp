@@ -25,4 +25,9 @@ export const WrapMobile = styled.div`
   }
 `;
 
-export const ImageLogo = styled.img``;
+export const ImageLogo = styled.img`
+  @media screen and (max-width: 768px) {
+    width: 65px;
+    height: 56px;
+  }
+`;

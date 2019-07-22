@@ -34,6 +34,10 @@ export const BoxBackground = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media screen and (max-width: 768px) {
+    box-shadow: none;
+    background: #3eaeaa;
+  }
 `;
 export const Box = styled(BoxBackground)`
   background: ${colors.darkgreen};
@@ -56,6 +60,12 @@ export const Box = styled(BoxBackground)`
     justify-self: center;
     left: 0;
   }
+  @media screen and (max-width: 768px) {
+    height: 120px;
+    padding: 5px 20px;
+    background: ${colors.darkgreen};
+    justify-content: space-evenly;
+  }
 `;
 export const Local = styled.p`
   font-family: "Oswald", sans-serif;
@@ -64,6 +74,9 @@ export const Local = styled.p`
   letter-spacing: 5.6px;
   font-weight: 300;
   text-transform: uppercase;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 export const Address = styled(Local)`
   font-weight: 700;
@@ -72,6 +85,10 @@ export const Address = styled(Local)`
   color: #f2d399;
   font-size: 44px;
   padding-right: 35px;
+  @media screen and (max-width: 768px) {
+    font-size: 23px;
+    padding-right: 25px;
+  }
 `;
 export const Map = styled.iframe`
   min-width: 100%;
@@ -86,6 +103,9 @@ export const MapAddres = styled.p`
   font-weight: 400;
   color: #ec682f;
   font-size: ${metrics.fonts.large};
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const FloatingBox = () => (
