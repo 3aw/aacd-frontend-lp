@@ -9,6 +9,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  @media screen and (max-width: 768px) {
+    padding: 10px 0;
+  }
 `;
 
 export const BoxContent = styled.div`
@@ -27,8 +30,18 @@ export const Text = styled.p`
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
+  @media screen and (max-width: 768px) {
+    font-size: 8px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
 `;
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  @media screen and (max-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
+`;
 
 export const Dev = () => (
   <BoxContent>
