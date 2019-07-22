@@ -31,6 +31,9 @@ export const Button = styled.button`
     background: linear-gradient(to right, #d26a35, #e6ad2f);
     color: ${colors.white};
   }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 export const DisabledBorderWrap = styled(BorderWrap)`
   background: ${colors.gray};

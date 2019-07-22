@@ -30,4 +30,8 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   position: relative;
   background: ${props => props.background};
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 20px;
+  }
 `;

@@ -11,11 +11,17 @@ export const Container = styled.div`
     background: #e7fffe;
     padding-bottom: 50px;
   }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 45px;
+  }
 `;
 
 export const ImpactarLogo = styled.img`
   @media screen and (max-width: 1024px) {
     align-self: center;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -38,6 +44,9 @@ export const HeaderBox = styled.header`
     flex-direction: column;
     justify-content: center;
   }
+  @media screen and (max-width: 768px) {
+    padding: 200px 20px 0;
+  }
 `;
 
 export const Title = styled.h2`
@@ -47,6 +56,9 @@ export const Title = styled.h2`
   font-weight: ${props => props.fw};
   text-transform: uppercase;
   letter-spacing: 2.4px;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -54,6 +66,10 @@ export const TitleContainer = styled.div`
   line-height: 52px;
   @media screen and (max-width: 1024px) {
     order: 0;
+  }
+  @media screen and (max-width: 768px) {
+    line-height: 23px;
+    margin-top: 80px;
   }
 `;
 
@@ -67,6 +83,10 @@ export const Text = styled.p`
     padding: 0;
     color: #515151;
   }
+  @media screen and (max-width: 768px) {
+    color: #515151;
+    font-size: 14px;
+  }
 `;
 
 export const InfoText = styled.p`
@@ -78,6 +98,10 @@ export const InfoText = styled.p`
   text-transform: uppercase;
   @media screen and (max-width: 1024px) {
   }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    letter-spacing: 1.2px;
+  }
 `;
 export const InfoBox = styled.div`
   display: flex;
@@ -85,6 +109,10 @@ export const InfoBox = styled.div`
   margin-top: 30px;
   width: 90%;
   margin-bottom: 60px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 `;
 export const TextBox = styled.div`
   width: 40%;
@@ -97,6 +125,11 @@ export const Income = styled.img`
   height: 76px;
   @media screen and (max-width: 1024px) {
     align-self: center;
+  }
+  @media screen and (max-width: 768px) {
+    width: 24px;
+    height: 38px;
+    margin-right: 10px;
   }
 `;
 export const EventInfoContainer = styled.div`
@@ -121,12 +154,19 @@ export const DateItem = styled.p`
   font-weight: 300;
   color: ${colors.green};
   text-transform: uppercase;
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const EventInfoText = styled(DateItem)`
   font-size: ${metrics.fonts.medium};
   color: ${colors.lightred};
   letter-spacing: 3.2px;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    margin-top: 5px;
+  }
 `;
 
 export const EventInfoHour = styled(EventInfoText)`
@@ -137,6 +177,10 @@ export const EventInfoHour = styled(EventInfoText)`
   text-transform: none;
   white-space: nowrap;
   letter-spacing: 0;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    margin-top: 5px;
+  }
 `;
 export const MobileWrapBox = styled.div`
   display: flex;
