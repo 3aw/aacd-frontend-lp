@@ -15,6 +15,13 @@ export const Container = styled.div`
   @media screen and (max-width: 1024px) {
     margin-top: 20px;
   }
+  @media screen and (max-width: 768px) {
+    width: 45%;
+    margin-right: 10px;
+    margin-top: 10px;
+    height: auto;
+    padding: 25px 10px;
+  }
 `;
 
 export const Image = styled.img`
@@ -29,6 +36,12 @@ export const Function = styled.p`
   text-transform: uppercase;
   letter-spacing: 2.8px;
   margin-bottom: 10px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
 `;
 
 export const Name = styled.h3`
@@ -39,6 +52,10 @@ export const Name = styled.h3`
   font-weight: 700;
   text-align: center;
   margin-bottom: 5px;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Ocupation = styled.p`
@@ -46,4 +63,7 @@ export const Ocupation = styled.p`
   font-size: ${metrics.fonts.small};
   color: ${colors.lightred};
   font-weight: 400;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
 `;

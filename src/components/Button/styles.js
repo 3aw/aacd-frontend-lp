@@ -11,6 +11,9 @@ export const BorderWrap = styled.div`
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
+  @media screen and (max-width: 768px) {
+    padding: 2px;
+  }
 `;
 
 export const Button = styled.button`
@@ -33,6 +36,7 @@ export const Button = styled.button`
   }
   @media screen and (max-width: 768px) {
     font-size: 14px;
+    padding: 18px;
   }
 `;
 export const DisabledBorderWrap = styled(BorderWrap)`

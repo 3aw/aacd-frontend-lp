@@ -10,6 +10,10 @@ export const Container = styled.div`
   @media screen and (max-width: 1024px) {
     padding: 0 40px;
   }
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const TitleBox = styled.div`
@@ -17,6 +21,12 @@ export const TitleBox = styled.div`
   border-bottom: solid 2px ${colors.red};
   width: 450px;
   margin-bottom: 80px;
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: solid 2px #be0710;
+    margin-bottom: 30px;
+  }
 `;
 
 export const TitleText = styled.h2`
@@ -26,6 +36,11 @@ export const TitleText = styled.h2`
   text-transform: uppercase;
   letter-spacing: 9.6px;
   margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: #be0710;
+  }
 `;
 
 export const GuestsContainer = styled.div`
@@ -36,6 +51,11 @@ export const GuestsContainer = styled.div`
   align-items: space-between;
   justify-content: center;
   margin-bottom: 80px;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 `;
 
 export const Title = () => (

@@ -20,6 +20,9 @@ export const Container = styled.div`
     margin-right: 0;
     margin-bottom: 20px;
     justify-content: center;
+    height: auto;
+    padding: 25px 0px;
+    /* background: url(${props => props.mbg}) */
   }
 `;
 
