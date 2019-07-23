@@ -11,8 +11,7 @@ export const Container = styled.div`
   align-items: center;
   box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.3);
   z-index: 99;
-  transform: ${props =>
-    props.hidden ? "translateY(-200px)" : "translateY(0)"};
+  transform: ${props => (props.hidden ? "translateY(-200px)" : "translateY(0)")};
   transition: transform 0.7s;
 `;
 

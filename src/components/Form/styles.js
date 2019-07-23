@@ -8,8 +8,8 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   background: ${colors.white};
-  position: fixed;
-  left: ${props => (props.disabled ? "-100%" : "0")};
+  /* position: fixed; */
+  /* left: ${props => (props.disabled ? "-100%" : "0")}; */
   transition: left 0.7s;
   z-index: 999;
   justify-content: center;
