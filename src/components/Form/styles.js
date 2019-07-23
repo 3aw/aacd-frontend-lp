@@ -103,3 +103,16 @@ export const FormContainer = styled.form`
   width: 100%;
   padding: 35px 70px 60px 170px;
 `;
+
+export const ParticipantBox = styled.div`
+  padding: 10px 0 20px;
+  border-bottom: 2px solid #a6222c;
+`;
+
+export const TitleForm = styled.div`
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  color: #a6222c;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+`;

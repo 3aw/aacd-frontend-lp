@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  disabled: true
+  disabled: false
 };
 
 export default function form(state = INITIAL_STATE, action) {

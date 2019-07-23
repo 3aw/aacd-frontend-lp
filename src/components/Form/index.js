@@ -1,28 +1,33 @@
 import React, { Component } from "react";
 import { connect, useDispatch } from "react-redux";
 import Button from "../Button";
-import { Container, Box, FormContainer, TitleBar, FormContent, FormText, InputElement } from "./styles";
+import { Container, Box, FormContainer, TitleBar, FormContent, FormText, InputElement, ParticipantBox, TitleForm } from "./styles";
 import * as formActions from "../../store/reducers/actions/form";
 
 export class Form extends Component {
   state = {
-    name: "",
-    email: "",
-    cellphone: "",
-    birthdate: "",
-    id: "",
     amount: null,
     formIsValid: null,
     active: null,
-    participants: [{}, {}]
+
+    buyer: {
+      name: "",
+      email: "",
+      cellphone: "",
+      birthdate: "",
+      id: ""
+    },
+    subscribers: [{ name: "", email: "" }]
   };
   handleSubmit = e => {
     const { dispatch } = this.props;
     e.preventDefault();
-    this.handleValidation(dispatch);
+    console.log(this.state.buyer);
+    // this.handleValidation(dispatch);
   };
+
   handleValidation = dispatch => {
-    let { name, email, cellphone, birthdate, id, amount } = this.state;
+    let { name, email, cellphone, birthdate, id } = this.state.buyer;
     this.setState({ formIsValid: false });
     if (name === "") {
       console.log("Nome Vazio");
@@ -34,21 +39,31 @@ export class Form extends Component {
       console.log("Data de Nascimento Vazio");
     } else if (id === "") {
       console.log("ID Vazio");
-    } else if (amount === null) {
-      console.log("Qtd Vazio");
     } else {
       this.setState({ formIsValid: true });
       dispatch(formActions.formSubmit());
     }
   };
+
   handleQtd = e => {
     e.preventDefault();
   };
+
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    const { buyer } = this.state;
+    buyer[e.target.name] = e.target.value;
+    this.setState({ buyer: buyer });
     this.setState({ formIsValid: false });
-    console.log(`Estado formIsValid: ${this.state.formIsValid}`);
+    // console.log(`Estado formIsValid: ${this.state.formIsValid}`);
   };
+
+  handleChangeSubscriber = (e, index) => {
+    const subscribers = this.state.subscribers;
+    subscribers[index][e.target.name] = e.target.value;
+
+    this.setState({ subscribers: subscribers });
+  };
+
   handleSelect = e => {
     this.setState({ amount: e.target.value });
     for (let i = 0; i < this.state.amount; i++) {
@@ -58,7 +73,10 @@ export class Form extends Component {
 
   newSubscriber = e => {
     e.preventDefault();
+    const subscribers = this.state.subscribers;
+    this.setState({ subscribers: [...subscribers, { name: "Samuel", email: "teste@teste" }] });
   };
+
   render() {
     console.log(this.state.amount);
     const { form } = this.props;
@@ -68,6 +86,7 @@ export class Form extends Component {
         <Box>
           <FormContainer onSubmit={this.handleSubmit}>
             <TitleBar onClick={() => dispatch(formActions.toggleAll(form))} />
+            <TitleForm>Dados do comprador</TitleForm>
             <FormContent>
               <FormText>Nome</FormText>
               <InputElement onChange={this.handleChange} type="text" name="name" active={true} />
@@ -89,23 +108,22 @@ export class Form extends Component {
               <InputElement onChange={this.handleChange} type="text" name="id" active={true} />
             </FormContent>
             <FormContent>
-              <FormText>Participantes</FormText>
-              <button type="button" onClick={this.newSubscriber}>
+              <TitleForm>Informação dos participantes</TitleForm>
+              <Button type="button" onClick={this.newSubscriber} bRadius={30}>
                 Adicionar participante
-              </button>
+              </Button>
 
-              {this.state.participants.map((item, index) => (
-                <div key={index}>
-                  {" "}
+              {this.state.subscribers.map((item, index) => (
+                <ParticipantBox key={index}>
                   <FormContent>
                     <FormText>Nome</FormText>
-                    <InputElement onChange={this.handleChange} type="text" name="name" active={true} />
+                    <InputElement onChange={e => this.handleChangeSubscriber(e, index)} type="text" name="name" active={true} />
                   </FormContent>
                   <FormContent>
                     <FormText>E-mail</FormText>
-                    <InputElement active={true} onChange={this.handleChange} type="text" name="email" />
+                    <InputElement active={true} onChange={e => this.handleChangeSubscriber(e, index)} type="text" name="email" />
                   </FormContent>
-                </div>
+                </ParticipantBox>
               ))}
             </FormContent>
 
