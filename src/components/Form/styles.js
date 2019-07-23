@@ -115,4 +115,5 @@ export const TitleForm = styled.div`
   color: #a6222c;
   text-transform: uppercase;
   margin: 20px 0 0 0;
+  border-bottom: 1px solid #a6222c;
 `;
