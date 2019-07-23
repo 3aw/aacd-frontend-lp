@@ -35,15 +35,7 @@ class Menu extends Component {
     return (
       <Container hidden={this.state.hidden}>
         <ImageLogo src={Logo} />
-        <Button
-          disabled={false}
-          width={435}
-          backgroundColor={colors.white}
-          bThickness={2}
-          bRadius={metrics.borderRadius.round}
-          onClick={() => dispatch(formActions.showForm(form))}
-          height={20}
-        >
+        <Button disabled={false} width={435} backgroundColor={colors.white} bThickness={2} bRadius={metrics.borderRadius.round} onClick={() => dispatch(formActions.showForm(form))} height={20}>
           Clique para se inscrever!
         </Button>
       </Container>

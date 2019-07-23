@@ -5,6 +5,7 @@ const INITIAL_STATE = {
 export default function form(state = INITIAL_STATE, action) {
   switch (action.type) {
     case "SHOW_FORM":
+      window.scrollTo(0, 0);
       return { ...state, disabled: action.disabled };
     case "TOGGLE_FORM":
       return { ...state, disabled: action.disabled };

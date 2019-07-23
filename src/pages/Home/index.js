@@ -7,27 +7,32 @@ import Tickets from "../../components/Tickets";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
 import TicketReturn from "../../components/TicketReturn/index";
-import store from "../../store";
 import Menu from "../../components/Menu";
-import { Provider } from "react-redux";
+import { connect } from "react-redux";
 import Location from "../../components/Location";
 
-export default class Home extends Component {
+class Home extends Component {
   render() {
+    const { form } = this.props;
     return (
-      <Provider store={store}>
-        <Container>
-          <Menu />
+      <Container>
+        {!form.disabled ? (
           <Form />
-          <TicketReturn />
-          <Header />
-          <ThemesAndSpeakers />
-          <Guests />
-          <Tickets />
-          <Location />
-          <Footer />
-        </Container>
-      </Provider>
+        ) : (
+          <>
+            <Menu />
+            <TicketReturn />
+            <Header />
+            <ThemesAndSpeakers />
+            <Guests />
+            <Tickets />
+            <Location />
+            <Footer />
+          </>
+        )}
+      </Container>
     );
   }
 }
+
+export default connect(state => ({ form: state.form }))(Home);
