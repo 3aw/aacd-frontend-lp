@@ -33,8 +33,7 @@ export class Form extends Component {
   handleSubmit = e => {
     const { dispatch } = this.props;
     e.preventDefault();
-    console.log(this.state.buyer);
-    // this.handleValidation(dispatch);
+    this.handleValidation(dispatch);
   };
 
   handleValidation = dispatch => {
@@ -93,7 +92,6 @@ export class Form extends Component {
   };
 
   render() {
-    console.log(this.state.subscribers);
     const { form } = this.props;
     const { dispatch } = this.props;
     return (
@@ -142,23 +140,10 @@ export class Form extends Component {
                 name="id"
               />
             </FormContent>
-            <FormContent>
-              <Button
-                onClick={this.newSubscriber}
-                width={40}
-                height={15}
-                backgroundColor={"#fff"}
-                bRadius={"8px"}
-                bThickness={2}
-                center={true}
-              >
-                Adicionar participante
-              </Button>
-            </FormContent>
             <SubscribersContainer active={this.state.active}>
               {this.state.subscribers.map((item, index) => (
                 <>
-                  <TitleForm>Dados do Participante: 0{index + 1}</TitleForm>
+                  <TitleForm>Dados do Participante: {index + 1}</TitleForm>
                   <ParticipantBox key={index}>
                     <FormContent>
                       <FormText>Nome</FormText>
@@ -181,7 +166,19 @@ export class Form extends Component {
               ))}
             </SubscribersContainer>
 
-            {this.state.form}
+            <FormContent>
+              <Button
+                onClick={this.newSubscriber}
+                width={40}
+                height={15}
+                backgroundColor={"#fff"}
+                bRadius={"8px"}
+                bThickness={2}
+                center={true}
+              >
+                Adicionar participante
+              </Button>
+            </FormContent>
             <FormContent>
               <Button
                 width={"100%"}
