@@ -85,7 +85,7 @@ export const InputElement = styled.input`
   width: 100%;
   padding: 15px 20px 10px;
   border: solid 2px #6f6f6f;
-  display: ${props => (props.active ? "block" : "none")};
+  display: block
   font-family: "Asap", sans-serif;
   font-size: ${metrics.fonts.xmedium};
   :focus {
@@ -98,6 +98,10 @@ export const FormContent = styled.div`
   padding: 20px 0 10px;
 `; // form item
 
+export const SubscribersContainer = styled(FormContent)`
+  display: ${props => (props.active ? "block" : "none")};
+`;
+
 export const FormContainer = styled.form`
   height: 100vh;
   width: 100%;
@@ -109,14 +113,12 @@ export const FormContainer = styled.form`
 
 export const ParticipantBox = styled.div`
   padding: 10px 0 20px;
-  border-bottom: 2px solid #a6222c;
 `;
 
 export const TitleForm = styled.div`
   font-family: "Oswald", sans-serif;
   font-size: 25px;
-  color: #a6222c;
+  color: ${colors.gray};
   text-transform: uppercase;
   margin: 20px 0 0 0;
-  border-bottom: 1px solid #a6222c;
 `;
