@@ -1,4 +1,3 @@
-import Guest from "../../images/Guests/bobfloriano.png";
 import Speaker from "../../images/Speakers/dr_claudio.png";
 const INITIAL_STATE = [
   {

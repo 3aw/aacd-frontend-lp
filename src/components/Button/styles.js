@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { colors, metrics } from "../../global/index";
+import { colors } from "../../global/index";
 
 export const BorderWrap = styled.div`
   width: ${props => props.width}%;

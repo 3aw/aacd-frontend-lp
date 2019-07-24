@@ -1,7 +1,18 @@
 import React, { Component } from "react";
-import { connect, useDispatch } from "react-redux";
+import { connect } from "react-redux";
 import Button from "../Button";
-import { Container, Box, FormContainer, TitleBar, FormContent, FormText, InputElement, ParticipantBox, TitleForm, SubscribersContainer } from "./styles";
+import {
+  Container,
+  Box,
+  FormContainer,
+  TitleBar,
+  FormContent,
+  FormText,
+  InputElement,
+  ParticipantBox,
+  TitleForm,
+  SubscribersContainer
+} from "./styles";
 import * as formActions from "../../store/reducers/actions/form";
 
 export class Form extends Component {
@@ -73,7 +84,6 @@ export class Form extends Component {
   newSubscriber = e => {
     e.preventDefault();
     const subscribers = this.state.subscribers;
-    const active = this.state.active;
     this.setState({
       active: true,
       subscribers: [...subscribers, { name: "Samuel", email: "teste@teste" }]
@@ -91,49 +101,88 @@ export class Form extends Component {
             <TitleForm>Dados do comprador</TitleForm>
             <FormContent>
               <FormText>Nome</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="name" />
+              <InputElement
+                onChange={this.handleChange}
+                type="text"
+                name="name"
+              />
             </FormContent>
             <FormContent>
               <FormText>E-mail</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="email" />
+              <InputElement
+                onChange={this.handleChange}
+                type="text"
+                name="email"
+              />
             </FormContent>
             <FormContent>
               <FormText>Celular</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="cellphone" />
+              <InputElement
+                onChange={this.handleChange}
+                type="text"
+                name="cellphone"
+              />
             </FormContent>
             <FormContent>
               <FormText>Data de Nascimento</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="birthdate" />
+              <InputElement
+                onChange={this.handleChange}
+                type="text"
+                name="birthdate"
+              />
             </FormContent>
             <FormContent>
               <FormText>RG</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="id" />
+              <InputElement
+                onChange={this.handleChange}
+                type="text"
+                name="id"
+              />
             </FormContent>
             <SubscribersContainer active={this.state.active}>
               {this.state.subscribers.map((item, index) => (
-                <>
+                <ParticipantBox key={index}>
                   <TitleForm>Dados do Participante: {index + 1}</TitleForm>
-                  <ParticipantBox key={index}>
-                    <FormContent>
-                      <FormText>Nome</FormText>
-                      <InputElement onChange={e => this.handleChangeSubscriber(e, index)} type="text" name="name" />
-                    </FormContent>
-                    <FormContent>
-                      <FormText>E-mail</FormText>
-                      <InputElement onChange={e => this.handleChangeSubscriber(e, index)} type="text" name="email" />
-                    </FormContent>
-                  </ParticipantBox>
-                </>
+                  <FormContent>
+                    <FormText>Nome</FormText>
+                    <InputElement
+                      onChange={e => this.handleChangeSubscriber(e, index)}
+                      type="text"
+                      name="name"
+                    />
+                  </FormContent>
+                  <FormContent>
+                    <FormText>E-mail</FormText>
+                    <InputElement
+                      onChange={e => this.handleChangeSubscriber(e, index)}
+                      type="text"
+                      name="email"
+                    />
+                  </FormContent>
+                </ParticipantBox>
               ))}
             </SubscribersContainer>
 
             <FormContent>
-              <Button onClick={this.newSubscriber} width={40} height={15} backgroundColor={"#fff"} bRadius={"8px"} bThickness={2}>
+              <Button
+                onClick={this.newSubscriber}
+                width={40}
+                height={15}
+                backgroundColor={"#fff"}
+                bRadius={"8px"}
+                bThickness={2}
+              >
                 Adicionar participante
               </Button>
             </FormContent>
             <FormContent>
-              <Button width={"100%"} bThickness={2} height={20} backgroundColor={"#fff"} bRadius={"32px"}>
+              <Button
+                width={"100%"}
+                bThickness={2}
+                height={20}
+                backgroundColor={"#fff"}
+                bRadius={"32px"}
+              >
                 Comprar!
               </Button>
             </FormContent>

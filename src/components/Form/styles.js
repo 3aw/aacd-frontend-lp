@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React from "react";
 import formbg from "../../images/backgroundForm.png";
-import girlbg from "../../images/formgirl.png";
 import { colors, metrics } from "../../global/index";
 
 export const Container = styled.div`
