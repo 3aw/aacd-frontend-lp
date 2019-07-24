@@ -26,7 +26,7 @@ export class Form extends Component {
       email: "",
       cellphone: "",
       birthdate: "",
-      id: ""
+      rg: ""
     },
     subscribers: []
   };
@@ -37,7 +37,7 @@ export class Form extends Component {
   };
 
   handleValidation = dispatch => {
-    let { name, email, cellphone, birthdate, id } = this.state.buyer;
+    let { name, email, cellphone, birthdate, rg } = this.state.buyer;
     this.setState({ formIsValid: false });
     if (name === "") {
       console.log("Nome Vazio");
@@ -47,7 +47,7 @@ export class Form extends Component {
       console.log("Celular Vazio");
     } else if (birthdate === "") {
       console.log("Data de Nascimento Vazio");
-    } else if (id === "") {
+    } else if (rg === "") {
       console.log("ID Vazio");
     } else {
       this.setState({ formIsValid: true });
@@ -86,7 +86,7 @@ export class Form extends Component {
     const subscribers = this.state.subscribers;
     this.setState({
       active: true,
-      subscribers: [...subscribers, { name: "Samuel", email: "teste@teste" }]
+      subscribers: [...subscribers, { name: "Samuel", rg: "" }]
     });
   };
 
@@ -136,7 +136,7 @@ export class Form extends Component {
               <InputElement
                 onChange={this.handleChange}
                 type="text"
-                name="id"
+                name="rg"
               />
             </FormContent>
             <SubscribersContainer active={this.state.active}>
@@ -152,11 +152,11 @@ export class Form extends Component {
                     />
                   </FormContent>
                   <FormContent>
-                    <FormText>E-mail</FormText>
+                    <FormText>RG</FormText>
                     <InputElement
                       onChange={e => this.handleChangeSubscriber(e, index)}
                       type="text"
-                      name="email"
+                      name="rg"
                     />
                   </FormContent>
                 </ParticipantBox>
