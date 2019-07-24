@@ -15,4 +15,18 @@ export const Container = styled.div`
   transition: transform 0.7s;
 `;
 
-export const ImageLogo = styled.img``;
+export const WrapMobile = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+`;
+
+export const ImageLogo = styled.img`
+  @media screen and (max-width: 768px) {
+    width: 65px;
+    height: 56px;
+  }
+`;

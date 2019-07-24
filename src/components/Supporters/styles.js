@@ -9,12 +9,15 @@ import reboucas from "../../images/Sponsors/reboucas.png";
 import whirlpool from "../../images/Sponsors/whirlpool.png";
 
 export const Container = styled.div`
-  max-width: 100%;
+  min-width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 90px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 50px;
+  }
 `;
 
 export const TitleBox = styled.div`
@@ -22,6 +25,21 @@ export const TitleBox = styled.div`
   border-bottom: solid 2px ${colors.red};
   margin-bottom: 80px;
   width: 60%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    border: none;
+    ::after {
+      content: "";
+      width: 50%;
+      display: block;
+      height: 2px;
+      background: #be0710;
+      margin: 0 auto;
+    }
+  }
 `;
 
 export const TitleText = styled.h2`
@@ -31,6 +49,11 @@ export const TitleText = styled.h2`
   text-transform: uppercase;
   letter-spacing: 4.8px;
   margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 19px;
+    letter-spacing: 4px;
+    color: #be0710;
+  }
 `;
 
 export const Title = ({ children }) => (
@@ -51,45 +74,74 @@ export const SupportersText = styled.p`
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3.2px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const SupportImage = styled.img`
   margin-right: ${props => props.marginRight}px;
+  @media screen and (max-width: 768px) {
+    width: auto;
+    height: 30px
+    margin-right: ${props => props.mobileMargin}px;
+  }
 `;
 export const SupportersBox = styled(SponsorsBox)`
   width: ${props => props.width}%;
   justify-content: ${props => props.justify};
   align-items: center;
-  border-right: solid 2px ${colors.red};
   padding: 15px 0;
-  :last-child {
-    border: none;
+  @media screen and (max-width: 1024px) {
+    justify-content: ${props => props.mbjustify};
   }
 `;
 
-export const SponsorsText = () => (
-  <>
-    <SponsorsBox>
-      <SupportersText>Patrocínio</SupportersText>
-    </SponsorsBox>
-    <SponsorsBox>
-      <SupportersText>Apoio</SupportersText>
-    </SponsorsBox>
-  </>
-);
+export const ItemWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 50px;
+  }
+`;
+export const Border = styled.div`
+  width: 2px;
+  height: 20px;
+  background-color: ${metrics.red};
+  position: absolute;
+`;
 
 export const Sponsors = () => (
   <>
-    <SupportersBox justify={"flex-start"} width={50}>
-      <SupportImage marginRight={94} src={whirlpool} />
-      <SupportImage src={consuladodamulher} />
-    </SupportersBox>
-    <SupportersBox justify={"space-between"} width={45}>
-      <SupportImage src={pufpuf} />
-      <SupportImage src={hiffman} />
-      <SupportImage src={bueno} />
-      <SupportImage src={reboucas} />
-    </SupportersBox>
+    <ItemWrap>
+      <SponsorsBox>
+        <SupportersText>Patrocínio</SupportersText>
+      </SponsorsBox>
+      <SupportersBox mbjustify={"center"} justify={"flex-start"} width={100}>
+        <SupportImage mobileMargin={50} marginRight={94} src={whirlpool} />
+        <SupportImage src={consuladodamulher} />
+      </SupportersBox>
+    </ItemWrap>
+    <ItemWrap>
+      <SponsorsBox>
+        <SupportersText>Apoio</SupportersText>
+      </SponsorsBox>
+      <SupportersBox justify={"space-between"} width={100}>
+        <SupportImage src={pufpuf} />
+        <SupportImage src={hiffman} />
+        <SupportImage src={bueno} />
+        <SupportImage src={reboucas} />
+      </SupportersBox>
+    </ItemWrap>
   </>
 );
 
@@ -107,6 +159,17 @@ export const ContactBox = styled(TitleBox)`
   flex-direction: row;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    ::after {
+      content: "";
+      width: 50%;
+      display: block;
+      height: 2px;
+      background: #be0710;
+      margin: 0 auto;
+    }
+  }
 `;
 export const ContactText = styled(TitleText)`
   font-size: ${metrics.fonts.regular};
@@ -114,6 +177,11 @@ export const ContactText = styled(TitleText)`
   letter-spacing: 4px;
   justify-self: flex-end;
   margin-top: 80px;
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #be0710;
+  }
 `;
 export const Text = styled.p`
   letter-spacing: ${props => props.ls}px;
@@ -124,11 +192,19 @@ export const Text = styled.p`
   text-transform: uppercase;
   display: inline-block;
   white-space: nowrap;
+  @media screen and (max-width: 768px) {
+    font-size: ${props => props.msize}px;
+    font-weight: ${props => props.mweight};
+  }
 `;
 export const ContactsContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Box = styled.div`
@@ -138,6 +214,9 @@ export const Box = styled.div`
   flex-direction: column;
   justify-content: space-between;
   min-height: 130px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 40px;
+  }
 `;
 export const Item = styled.div`
   display: flex;
@@ -148,43 +227,99 @@ export const Item = styled.div`
 export const Contacts = () => (
   <ContactsContainer>
     <Box>
-      <Text ls={2.4} size={24} weight={500} color={colors.dark}>
+      <Text msize={16} ls={2.4} size={24} weight={500} color={colors.dark}>
         Andrea Lins
       </Text>
       <Item>
-        <Text ls={3.2} size={16} weight={500} color={colors.red}>
+        <Text
+          mweight={400}
+          msize={12}
+          ls={3.2}
+          size={16}
+          weight={500}
+          color={colors.red}
+        >
           E-mail
         </Text>
-        <Text ls={1.6} size={16} weight={700} color={colors.green}>
+        <Text
+          msize={16}
+          mweight={400}
+          ls={1.6}
+          size={16}
+          weight={700}
+          color={colors.green}
+        >
           androdrigues@aacd.org.br
         </Text>
       </Item>
       <Item>
-        <Text ls={3.2} size={16} weight={500} color={colors.red}>
+        <Text
+          mweight={400}
+          msize={12}
+          ls={3.2}
+          size={16}
+          weight={500}
+          color={colors.red}
+        >
           Telefones
         </Text>
-        <Text ls={1.6} size={16} weight={700} color={colors.green}>
+        <Text
+          mweight={400}
+          ls={1.6}
+          size={16}
+          weight={700}
+          color={colors.green}
+          msize={16}
+        >
           (11) 5576 - 0460
         </Text>
       </Item>
     </Box>
     <Box>
-      <Text ls={2.4} size={24} weight={500} color={colors.dark}>
+      <Text msize={16} ls={2.4} size={24} weight={500} color={colors.dark}>
         Geziane Pereira
       </Text>
       <Item>
-        <Text ls={3.2} size={16} weight={500} color={colors.red}>
+        <Text
+          mweight={400}
+          msize={12}
+          ls={3.2}
+          size={16}
+          weight={500}
+          color={colors.red}
+        >
           E-mail
         </Text>
-        <Text ls={1.6} size={16} weight={700} color={colors.green}>
+        <Text
+          msize={16}
+          mweight={400}
+          ls={1.6}
+          size={16}
+          weight={700}
+          color={colors.green}
+        >
           gleticia@aacd.org.br
         </Text>
       </Item>
       <Item>
-        <Text ls={3.2} size={16} weight={500} color={colors.red}>
+        <Text
+          mweight={400}
+          msize={12}
+          ls={3.2}
+          size={16}
+          weight={500}
+          color={colors.red}
+        >
           Telefones
         </Text>
-        <Text ls={1.6} size={16} weight={700} color={colors.green}>
+        <Text
+          mweight={400}
+          ls={1.6}
+          size={16}
+          weight={700}
+          color={colors.green}
+          msize={16}
+        >
           (11) 5576 - 0867
         </Text>
       </Item>
@@ -200,6 +335,9 @@ export const Bold = styled.p`
   text-transform: uppercase;
   white-space: nowrap;
   display: inline;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 export const Fixed = styled.div`
   display: flex;
@@ -217,6 +355,7 @@ export const ContactSection = ({ children }) => (
         size={metrics.fonts.medium}
         color={colors.dark}
         weight={400}
+        msize={12}
       >
         equipe de eventos da&nbsp;
       </Text>

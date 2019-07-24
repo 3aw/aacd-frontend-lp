@@ -3,10 +3,17 @@ import React from "react";
 import { colors, metrics } from "../../global/index";
 
 export const BorderWrap = styled.div`
-  width: ${props => props.width}px;
+  width: ${props => props.width}%;
   background: linear-gradient(to right, #d26a35, #e6ad2f);
   border-radius: ${props => props.bRadius};
   padding: ${props => props.bThickness}px;
+  min-width: 30%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 2px;
+  }
 `;
 
 export const Button = styled.button`
@@ -14,17 +21,22 @@ export const Button = styled.button`
   border-radius: ${props => props.bRadius};
   text-align: center;
   font-family: "Asap", sans-serif;
-  padding: ${props => props.height}px 0px;
+  padding: ${props => props.height}px 0;
   font-weight: "400";
   text-transform: uppercase;
-  font-size: ${metrics.fonts.regular};
+  font-size: 1.3vw;
   color: ${colors.orange};
   width: 100%;
+  letter-spacing: 2px;
   background: ${props => props.backgroundColor};
   cursor: pointer;
   &:hover {
     background: linear-gradient(to right, #d26a35, #e6ad2f);
     color: ${colors.white};
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    padding: ${props => props.mheight}px 0;
   }
 `;
 export const DisabledBorderWrap = styled(BorderWrap)`
@@ -47,7 +59,8 @@ export const Container = ({
   disabled,
   bThickness,
   onClick,
-  height
+  height,
+  mheight
 }) =>
   disabled ? (
     <DisabledBorderWrap bThickness={bThickness} bRadius={bRadius} width={width}>
@@ -55,6 +68,7 @@ export const Container = ({
         height={height}
         bRadius={bRadius}
         backgroundColor={colors.white}
+        mheight={mheight}
       >
         {children}
       </DisabledButton>
@@ -66,6 +80,7 @@ export const Container = ({
         onClick={onClick}
         bRadius={bRadius}
         backgroundColor={backgroundColor}
+        mheight={mheight}
       >
         {children}
       </Button>

@@ -7,6 +7,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding-bottom: 100px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 35px;
+  }
 `;
 
 export const TitleBox = styled.div`
@@ -14,6 +17,18 @@ export const TitleBox = styled.div`
   border-bottom: solid 2px ${colors.red};
   width: 700px;
   margin-bottom: 35px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    border-bottom: none;
+    ::after {
+      display: block;
+      width: 50%;
+      background: #be0710;
+      height: 2px;
+      content: "";
+      margin: 0 auto;
+    }
+  }
 `;
 
 export const TitleText = styled.h2`
@@ -23,6 +38,11 @@ export const TitleText = styled.h2`
   text-transform: uppercase;
   letter-spacing: 9.6px;
   margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    color: #be0710;
+    letter-spacing: 4px;
+  }
 `;
 
 export const SpeakerContainer = styled.div`
@@ -39,6 +59,10 @@ export const SpeakerContainer = styled.div`
     width: 60%;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
   }
 `;
 

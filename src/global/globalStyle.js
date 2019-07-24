@@ -23,11 +23,15 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Wrapper = styled.div`
-  width: 1110px;
+  max-width: 1110px;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
   position: relative;
   background: ${props => props.background};
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 20px;
+  }
 `;

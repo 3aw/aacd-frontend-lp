@@ -21,12 +21,12 @@ const Guests = ({ form, guests, dispatch }) => (
       ))}
     </GuestsContainer>
     <Button
-      width={460}
+      width={30}
       backgroundColor={colors.white}
       bThickness={5}
       bRadius={metrics.borderRadius.round}
       onClick={() => dispatch(formActions.showForm(form))}
-      height={10}
+      height={20}
     >
       Clique para se inscrever!
     </Button>
