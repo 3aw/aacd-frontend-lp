@@ -22,7 +22,7 @@ export const Container = styled.div`
     justify-content: center;
     height: auto;
     padding: 25px 0px;
-    /* background: url(${props => props.mbg}) */
+    background-position: right;
   }
 `;
 
