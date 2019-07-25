@@ -5,6 +5,7 @@ import Success from "../src/pages/Success";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import store from "./store";
 import { Provider } from "react-redux";
+import Canceled from "./pages/Canceled";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/success" component={Success} />
+          <Route path="/canceled" component={Canceled} />
         </Switch>
       </BrowserRouter>
     </Provider>

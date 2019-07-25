@@ -135,3 +135,27 @@ export const TitleForm = styled.div`
   text-transform: uppercase;
   margin: 20px 0 0 0;
 `;
+
+export const LoadingBox = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
+  background-color: rgba(200, 200, 200, 0.8);
+  z-index: 999;
+  display: flex;
+  padding-top: calc(50vh - 180px);
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Text = styled.div`
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  color: #a6222c;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+`;
