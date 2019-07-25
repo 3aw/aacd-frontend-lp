@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import formbg from "../../images/backgroundForm.png";
+import formbgmobile from "../../images/formbgmobile.png";
 import { colors, metrics } from "../../global/index";
 
 export const Container = styled.div`
@@ -15,10 +16,19 @@ export const Container = styled.div`
   background-image: url(${formbg});
   background-repeat: no-repeat;
   background-position: top left;
+  @media screen and (max-width: 768px){
+    background: url(${formbgmobile});
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+  }
 `;
 // item
 export const Box = styled.div`
   width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Cancel = styled.div`
@@ -60,6 +70,10 @@ export const TitleBox = styled.div`
 
 export const Item = styled.div`
   align-self: ${props => props.alignSelf};
+  @media screen and (max-width: 768px) {
+    align-self: center;
+    margin-top: 5px;
+  }
 `;
 
 export const TitleBar = props => (
@@ -106,7 +120,7 @@ export const FormContainer = styled.form`
   width: 100%;
   padding: 35px 70px 60px 170px;
   @media screen and (max-width: 1024px) {
-    padding: 0;
+    padding: 0 30px;
   }
 `;
 

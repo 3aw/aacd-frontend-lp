@@ -15,6 +15,7 @@ export const Container = styled.div`
     padding: 0 20px;
     display: flex;
     justify-content: center;
+    display: ${props => (props.active ? "block" : "none")};
   }
 `;
 

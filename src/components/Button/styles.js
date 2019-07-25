@@ -14,7 +14,7 @@ export const BorderWrap = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 768px) {
-    padding: 2px;
+    width: 100%;
   }
 `;
 
