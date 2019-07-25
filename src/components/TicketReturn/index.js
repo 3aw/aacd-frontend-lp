@@ -1,11 +1,47 @@
 import React, { Component } from "react";
-import { Container, FloatingBox } from "./styles";
+import {
+  Container,
+  Box,
+  Image,
+  TextWrap,
+  Title,
+  Text,
+  ButtonWrap
+} from "./styles";
+import Logo from "../../images/returnLogo.png";
+import Button from "../Button";
+import { colors, metrics } from "../../global/index";
+import { Link } from "react-router-dom";
 
 export default class TicketReturn extends Component {
   render() {
     return (
       <Container active={true}>
-        <FloatingBox onClick={() => {}} />
+        <Box>
+          <Image src={Logo} />
+          <TextWrap>
+            <Title>obrigada!</Title>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida.
+            </Text>
+          </TextWrap>
+
+          <ButtonWrap>
+            <Link to="/">
+              <Button
+                width={100}
+                bThickness={2}
+                height={20}
+                bRadius={metrics.borderRadius.round}
+                backgroundColor={colors.white}
+              >
+                fechar
+              </Button>
+            </Link>
+          </ButtonWrap>
+        </Box>
       </Container>
     );
   }

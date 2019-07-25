@@ -95,6 +95,9 @@ export const TextWrap = styled.div`
     padding-top: 0;
   }
 `;
+export const ButtonWrap = styled.div`
+  width: 100%;
+`;
 
 export const FloatingBox = props => (
   <Box>
