@@ -11,6 +11,11 @@ export const Container = styled.div`
   position: fixed;
   z-index: 9999;
   display: ${props => (props.active ? "block" : "none")};
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const Box = styled.div`
@@ -24,18 +29,39 @@ export const Box = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px 95px 40px;
-  border-radius: ${metrics.borderRadius.round};
+  border-radius: 16px;
   justify-content: space-between;
   height: 600px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    position: relative;
+    top: 30px;
+    padding: 0 15px;
+    justify-content: space-evenly;
+    left: 0;
+    margin-left: 0;
+  }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  @media screen and (max-width: 768px) {
+    width: 150px;
+    height: 130px;
+  }
+`;
 
 export const Text = styled.p`
   font-size: ${metrics.fonts.regular};
   font-family: "Asap";
   padding: 0 40px;
   line-height: 30px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
 `;
 export const Title = styled.h2`
   font-family: "Oswald", sans-serif;
@@ -44,6 +70,10 @@ export const Title = styled.h2`
   text-transform: uppercase;
   white-space: nowrap;
   font-weight: 700;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    margin-top: 40px;
+  }
 `;
 
 export const TextWrap = styled.div`
@@ -59,6 +89,10 @@ export const TextWrap = styled.div`
   background-size: 30px 5px;
   background-repeat: repeat-x;
   padding-top: 25px;
+  @media screen and (max-width: 768px) {
+    background-size: 5% 2px;
+    padding-top: 0;
+  }
 `;
 
 export const FloatingBox = props => (
@@ -73,8 +107,9 @@ export const FloatingBox = props => (
       </Text>
     </TextWrap>
     <Button
-      width={240}
+      width={50}
       bThickness={2}
+      height={20}
       bRadius={metrics.borderRadius.round}
       backgroundColor={colors.white}
       onClick={props.onClick}
