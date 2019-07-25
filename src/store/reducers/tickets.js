@@ -5,8 +5,8 @@ const INITIAL_STATE = [
     total: "40 ingressos",
     currency: "R$",
     price: "300,00",
-    disabled: true,
-    value: "Esgotado!"
+    disabled: false,
+    value: "Comprar!"
   },
   {
     id: 2,
@@ -14,8 +14,8 @@ const INITIAL_STATE = [
     total: "220 ingressos",
     currency: "R$",
     price: "400,00",
-    disabled: false,
-    value: "Comprar!"
+    disabled: true,
+    value: "Aguarde"
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const INITIAL_STATE = [
     total: "220 ingressos",
     currency: "R$",
     price: "450,00",
-    disabled: false,
+    disabled: true,
     value: "Aguarde"
   }
 ];
