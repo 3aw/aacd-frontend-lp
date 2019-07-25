@@ -21,7 +21,6 @@ class Home extends Component {
         ) : (
           <>
             <Menu />
-            <TicketReturn />
             <Header />
             <ThemesAndSpeakers />
             <Guests />
