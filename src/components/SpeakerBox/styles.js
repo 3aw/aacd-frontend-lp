@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around
   border-radius: ${metrics.borderRadius.square};
   background: url(${props => props.bg});
   background-repeat: no-repeat;
@@ -88,7 +88,7 @@ export const Ocupation = styled.p`
   color: ${colors.green};
   text-align: center;
   text-transform: uppercase;
-  padding: 0 15px;
+  padding: 0 10px;
   letter-spacing: 1.2px;
   @media screen and (max-width: 768px) {
     font-size: 10px;
