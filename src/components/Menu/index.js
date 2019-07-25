@@ -29,13 +29,11 @@ class Menu extends Component {
       }
     }
   };
-  render() {
-    const { form } = this.props;
-    const { dispatch } = this.props;
-    return (
-      <Container hidden={this.state.hidden}>
-        <ImageLogo src={Logo} />
-        <WrapMobile>
+  detectDevice = (form, dispatch) => {
+    if (window.screen.width <= 760) {
+      return (
+        <Container hidden={this.state.hidden}>
+          <ImageLogo src={Logo} />
           <Button
             disabled={false}
             width={30}
@@ -43,13 +41,37 @@ class Menu extends Component {
             bThickness={2}
             bRadius={metrics.borderRadius.round}
             onClick={() => dispatch(formActions.showForm(form))}
-            height={20}
+            height={10}
           >
-            Clique para se inscrever!
+            Inscreva-se!
           </Button>
-        </WrapMobile>
-      </Container>
-    );
+        </Container>
+      );
+    } else if (window.screen.width >= 1024) {
+      return (
+        <Container hidden={this.state.hidden}>
+          <ImageLogo src={Logo} />
+          <WrapMobile>
+            <Button
+              disabled={false}
+              width={30}
+              backgroundColor={colors.white}
+              bThickness={2}
+              bRadius={metrics.borderRadius.round}
+              onClick={() => dispatch(formActions.showForm(form))}
+              height={20}
+            >
+              Clique para se inscrever!
+            </Button>
+          </WrapMobile>
+        </Container>
+      );
+    }
+  };
+  render() {
+    const { form } = this.props;
+    const { dispatch } = this.props;
+    return this.detectDevice(form, dispatch);
   }
 }
 
