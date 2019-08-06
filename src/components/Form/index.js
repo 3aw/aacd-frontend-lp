@@ -105,7 +105,7 @@ export class Form extends Component {
 
     axios({
       method: "post",
-      url: "http://aacd-impactar.dev2.3aw.com.br/subscribe/new",
+      url: "http://impactar.3aw.com.br/subscribe/new",
       data: {
         batch: 1,
         event: 1,
