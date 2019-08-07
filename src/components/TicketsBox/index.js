@@ -3,31 +3,12 @@ import Button from "../../components/Button";
 import { colors, metrics } from "../../global/index";
 import * as formActions from "../../store/reducers/actions/form";
 import { connect } from "react-redux";
-import {
-  Container,
-  TicketLot,
-  LotType,
-  TicketTotal,
-  PriceBox,
-  PriceCurrency,
-  Price,
-  PriceTotal
-} from "./styles";
+import { Container, TicketLot, LotType, PriceBox, PriceCurrency, Price, PriceTotal } from "./styles";
 
-const TicketsBox = ({
-  disabled,
-  lot,
-  tickets,
-  currency,
-  price,
-  form,
-  value,
-  dispatch
-}) => (
+const TicketsBox = ({ disabled, lot, currency, price, form, value, dispatch }) => (
   <Container>
     <TicketLot>
       <LotType disabled={disabled}>{lot}</LotType>
-      <TicketTotal disabled={disabled}>{tickets}</TicketTotal>
     </TicketLot>
     <PriceBox>
       <Price>
@@ -35,16 +16,7 @@ const TicketsBox = ({
         <PriceTotal disabled={disabled}>{price}</PriceTotal>
       </Price>
     </PriceBox>
-    <Button
-      width={100}
-      bRadius={metrics.borderRadius.square}
-      backgroundColor={colors.white}
-      bThickness={2}
-      disabled={disabled}
-      height={5}
-      onClick={() => dispatch(formActions.showForm(form))}
-      mheight={10}
-    >
+    <Button width={100} bRadius={metrics.borderRadius.square} backgroundColor={colors.white} bThickness={2} disabled={disabled} height={5} onClick={() => dispatch(formActions.showForm(form))} mheight={10}>
       {value}
     </Button>
   </Container>
