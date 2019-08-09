@@ -31,7 +31,7 @@ const INITIAL_STATE = [
     id: 2,
     background: letterM,
     image: Speaker2,
-    theme: "Maestria",
+    theme: "Motivação",
     name: "Bernadinho",
     ocupation: "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
   },
@@ -73,7 +73,7 @@ const INITIAL_STATE = [
     image: Speaker7,
     theme: "Adaptabilidade",
     name: "Anna Chaia",
-    ocupation: "Ceo da samsonite mercosul e escritora"
+    ocupation: "CEO e Escritora"
   },
   {
     id: 8,

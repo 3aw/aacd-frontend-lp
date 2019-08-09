@@ -134,9 +134,9 @@ export class Form extends Component {
             <TitleBar onClick={() => dispatch(formActions.toggleAll(form))} />
             <TitleForm>Dados do comprador</TitleForm>
             <FormContent>
-              {/* <button type={"button"} onClick={this.seed}>
+              <button type={"button"} onClick={this.seed}>
                 preencher
-              </button> */}
+              </button>
               <FormText>Nome</FormText>
               <InputElement onChange={this.handleChange} type="text" name="name" />
             </FormContent>

@@ -13,14 +13,14 @@ const INITIAL_STATE = [
     id: 2,
     image: Guest2,
     function: "Mestre de Cerimônia",
-    name: "Cesar Tralli",
+    name: "Bob Floriano",
     ocupation: "Jornalista e locutor"
   },
   {
     id: 3,
     image: Guest3,
     function: "coktail e poket show",
-    name: "Sabrina parlatori",
+    name: "Sabrina parlatore",
     ocupation: "Cantora e apresentadora"
   }
 ];

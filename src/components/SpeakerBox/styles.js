@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around
+  justify-content: space-around;
   border-radius: ${metrics.borderRadius.square};
   background: url(${props => props.bg});
   background-repeat: no-repeat;
