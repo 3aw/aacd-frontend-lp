@@ -5,6 +5,7 @@ import { Container, Box, FormContainer, TitleBar, FormContent, FormText, InputEl
 import * as formActions from "../../store/reducers/actions/form";
 import axios from "axios";
 import { ReactComponent as Loading } from "../../images/loading.svg";
+import MaskedInput from 'react-maskedinput';
 
 export class Form extends Component {
   state = {
@@ -43,10 +44,11 @@ export class Form extends Component {
     } else if (rg === "") {
       console.log("ID Vazio");
     } else {
+      
       this.setState({ formIsValid: true });
       this.send();
-      // dispatch(formActions.formSubmit());
-      // console.log(this.state);
+      dispatch(formActions.formSubmit());
+
     }
   };
 
@@ -96,7 +98,7 @@ export class Form extends Component {
       },
       subscribers: [{ name: "Cayque Freitas", rg: "1112223334" }, { name: "Vinicius Machado", rg: "9998885552" }]
     });
-    console.log("seed");
+    console.log(this.state.buyer);
   };
 
   send = async () => {
@@ -128,15 +130,11 @@ export class Form extends Component {
             <Text>Redirecionando para pagamento. Aguarde.</Text>
           </LoadingBox>
         )}
-
         <Box>
           <FormContainer onSubmit={this.handleSubmit}>
             <TitleBar onClick={() => dispatch(formActions.toggleAll(form))} />
             <TitleForm>Dados do comprador</TitleForm>
             <FormContent>
-              {/* <button type={"button"} onClick={this.seed}>
-                preencher
-              </button> */}
               <FormText>Nome</FormText>
               <InputElement onChange={this.handleChange} type="text" name="name" />
             </FormContent>
@@ -146,15 +144,15 @@ export class Form extends Component {
             </FormContent>
             <FormContent>
               <FormText>Celular</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="phone" />
+              <MaskedInput onChange={this.handleChange} placeholder="" data-type="number" mask={'(11) 11111-1111'} type="text" name="phone" />
             </FormContent>
             <FormContent>
               <FormText>Data de Nascimento</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="birthdate" />
+              <MaskedInput onChange={this.handleChange} placeholder="" data-type="number" mask={'11/11/1111'} type="text" name="birthdate" />
             </FormContent>
             <FormContent>
               <FormText>RG</FormText>
-              <InputElement onChange={this.handleChange} type="text" name="rg" />
+              <MaskedInput onChange={this.handleChange} placeholder="" data-type="number" mask={'11.111.111-1'} type="text" name="rg"/>
             </FormContent>
             <SubscribersContainer active={this.state.active}>
               {this.state.subscribers.map((item, index) => (
@@ -166,7 +164,7 @@ export class Form extends Component {
                   </FormContent>
                   <FormContent>
                     <FormText>RG</FormText>
-                    <InputElement onChange={e => this.handleChangeSubscriber(e, index)} type="text" name="rg" />
+                    <MaskedInput onChange={e => this.handleChangeSubscriber(e, index)}  placeholder="" data-type="number" mask={'11.111.111-1'} type="text" name="rg" />
                   </FormContent>
                 </ParticipantBox>
               ))}
