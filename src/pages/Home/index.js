@@ -6,7 +6,6 @@ import ThemesAndSpeakers from "../../components/ThemesAndSpeakers";
 import Tickets from "../../components/Tickets";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
-import TicketReturn from "../../components/TicketReturn/index";
 import Menu from "../../components/Menu";
 import { connect } from "react-redux";
 import Location from "../../components/Location";

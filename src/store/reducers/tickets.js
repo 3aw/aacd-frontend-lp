@@ -3,7 +3,7 @@ const INITIAL_STATE = [
     id: 1,
     pack: "1º lote",
     currency: "R$",
-    price: "300,00",
+    price: "250,00",
     disabled: false,
     value: "Comprar!"
   }
