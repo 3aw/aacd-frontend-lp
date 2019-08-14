@@ -16,13 +16,13 @@ const Button = ({
     bRadius={bRadius}
     backgroundColor={backgroundColor}
     width={width}
-    disabled={disabled}
+    disabled={true}
     bThickness={bThickness}
     onClick={onClick}
     height={height}
     center={center}
   >
-    {children}
+    Aguarde Informações de venda
   </Container>
 );
 export default Button;
