@@ -56,6 +56,7 @@ export const Text = styled.p`
   font-family: "Asap";
   padding: 0 40px;
   line-height: 30px;
+  text-align: center;
   @media screen and (max-width: 768px) {
     font-size: 12px;
     line-height: 18px;
@@ -68,7 +69,6 @@ export const Title = styled.h2`
   font-family: "Oswald", sans-serif;
   font-size: ${metrics.fonts.Title};
   color: ${colors.red};
-  text-transform: uppercase;
   white-space: nowrap;
   font-weight: 700;
   @media screen and (max-width: 768px) {

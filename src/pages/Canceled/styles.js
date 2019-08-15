@@ -55,6 +55,7 @@ export const Text = styled.p`
   font-size: ${metrics.fonts.regular};
   font-family: "Asap";
   padding: 0 40px;
+  text-align: center;
   line-height: 30px;
   @media screen and (max-width: 768px) {
     font-size: 12px;
@@ -68,9 +69,12 @@ export const Title = styled.h2`
   font-family: "Oswald", sans-serif;
   font-size: ${metrics.fonts.Title};
   color: ${colors.red};
-  text-transform: uppercase;
+  text-transform: normal;
+  text-align: center;
+  line-height: 54px;
   white-space: nowrap;
   font-weight: 700;
+  margin-bottom: 10px;
   @media screen and (max-width: 768px) {
     font-size: 16px;
     margin-top: 40px;
@@ -81,7 +85,11 @@ export const TextWrap = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+  background-image: linear-gradient(
+    to right,
+    black 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
   background-position: top;
   background-size: 30px 5px;
   background-repeat: repeat-x;
@@ -100,9 +108,20 @@ export const FloatingBox = props => (
     <Image src={Logo} />
     <TextWrap>
       <Title>obrigada!</Title>
-      <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</Text>
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+        suspendisse ultrices gravida.
+      </Text>
     </TextWrap>
-    <Button width={50} bThickness={2} height={20} bRadius={metrics.borderRadius.round} backgroundColor={colors.white} onClick={props.onClick}>
+    <Button
+      width={50}
+      bThickness={2}
+      height={20}
+      bRadius={metrics.borderRadius.round}
+      backgroundColor={colors.white}
+      onClick={props.onClick}
+    >
       fechar
     </Button>
   </Box>
