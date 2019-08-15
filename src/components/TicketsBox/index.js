@@ -4,9 +4,11 @@ import { colors, metrics } from "../../global/index";
 import * as formActions from "../../store/reducers/actions/form";
 import { connect } from "react-redux";
 import { Container, TicketLot, LotType, PriceBox, PriceCurrency, Price, PriceTotal } from "./styles";
-
+// lot = name
+// price = value
 const TicketsBox = ({ disabled, lot, currency, price, form, value, dispatch }) => (
   <Container>
+    {console.log(lot, price, value, dispatch)}
     <TicketLot>
       <LotType disabled={disabled}>{lot}</LotType>
     </TicketLot>
