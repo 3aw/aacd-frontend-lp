@@ -10,7 +10,7 @@ const Tickets = ({ tickets, dispatch }) => {
   const [lote, setLote] = useState({ value: 0 });
 
   async function getData() {
-    const response = await axios.get("http://192.168.2.108:3001/batches/list").catch(err => err.response);
+    const response = await axios.get("http://impactar.3aw.com.br/batches/list").catch(err => err.response);
     setLotes(response.data.lotes);
     setLote(response.data.lote);
   }
