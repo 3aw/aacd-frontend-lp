@@ -8,9 +8,11 @@ import axios from "axios";
 const Tickets = ({ tickets, dispatch }) => {
   const [lotes, setLotes] = useState([]);
   const [lote, setLote] = useState({ value: 0 });
-
+  //
   async function getData() {
-    const response = await axios.get("http://impactar.3aw.com.br/batches/list").catch(err => err.response);
+    const response = await axios
+      .get("http://impactar.3aw.com.br/batches/list")
+      .catch(err => err.response);
     setLotes(response.data.lotes);
     setLote(response.data.lote);
   }
@@ -22,7 +24,18 @@ const Tickets = ({ tickets, dispatch }) => {
     <Container>
       <Wrapper>
         <Title />
-        <TicketsContainer>{lote ? <TicketsBox lot={lote.name} currency={"R$"} price={lote.value.toFixed(2).replace(".", ",")} value={"Comprar!"} /> : <p>Ingressos Esgotados!</p>}</TicketsContainer>
+        <TicketsContainer>
+          {lote ? (
+            <TicketsBox
+              lot={lote.name}
+              currency={"R$"}
+              price={lote.value.toFixed(2).replace(".", ",")}
+              value={"Comprar!"}
+            />
+          ) : (
+            <p>Ingressos Esgotados!</p>
+          )}
+        </TicketsContainer>
       </Wrapper>
     </Container>
   );
