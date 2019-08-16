@@ -33,7 +33,7 @@ const Tickets = ({ tickets, dispatch }) => {
               value={"Comprar!"}
             />
           ) : (
-            <p>Ingressos Esgotados!</p>
+            <p class="ingressos-esgotados">Ingressos Esgotados!</p>
           )}
         </TicketsContainer>
       </Wrapper>

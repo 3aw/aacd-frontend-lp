@@ -11,7 +11,7 @@ export const Container = styled.div`
   background-position: 50% 50%;
   padding-bottom: 135px;
   position: relative;
-  p {
+  .ingressos-esgotados {
     font-family: "Oswald", sans-serif;
     font-size: ${metrics.fonts.Title};
     color: ${colors.white};
