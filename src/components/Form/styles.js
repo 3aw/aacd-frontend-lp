@@ -98,7 +98,7 @@ export const InputElement = styled.input`
   width: 100%;
   padding: 15px 20px 10px;
   border: solid 2px #6f6f6f;
-  display: block
+  display: block;
   font-family: "Asap", sans-serif;
   font-size: ${metrics.fonts.xmedium};
   :focus {
@@ -147,6 +147,11 @@ export const LoadingBox = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
 `;
 
 export const Text = styled.div`
