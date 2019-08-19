@@ -15,7 +15,13 @@ class Menu extends Component {
   }
   // form = useSelector(state => state.form);
   handleScroll = e => {
-    if (navigator.userAgent.indexOf("Chrome") >= 0) {
+    if (navigator.userAgent.indexOf("Edge") > 0) {
+      if (e.target.body.scrollTop > 200) {
+        this.setState({ hidden: false });
+      } else {
+        this.setState({ hidden: true });
+      }
+    } else if (navigator.userAgent.indexOf("Chrome") === 81) {
       if (e.path[1].scrollY > 200) {
         this.setState({ hidden: false });
       } else {
@@ -28,6 +34,8 @@ class Menu extends Component {
         this.setState({ hidden: true });
       }
     }
+    console.log(navigator.userAgent);
+    // console.log(e.target.body.scrollTop);
   };
   detectDevice = (form, dispatch) => {
     if (window.screen.width <= 760) {
