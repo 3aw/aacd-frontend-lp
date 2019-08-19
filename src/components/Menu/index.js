@@ -34,7 +34,6 @@ class Menu extends Component {
         this.setState({ hidden: true });
       }
     }
-    console.log(navigator.userAgent);
     // console.log(e.target.body.scrollTop);
   };
   detectDevice = (form, dispatch) => {
