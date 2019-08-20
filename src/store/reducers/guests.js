@@ -19,7 +19,7 @@ const INITIAL_STATE = [
   {
     id: 3,
     image: Guest3,
-    function: "coktail e pocket show",
+    function: "Pocket show",
     name: "Sabrina parlatore",
     ocupation: "Cantora e apresentadora"
   }
