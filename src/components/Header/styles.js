@@ -207,11 +207,11 @@ export const EventInfo = () => (
     <MobileWrapBox>
       <InfoDate width={60}>
         <EventInfoText>Credenciamento</EventInfoText>
-        <EventInfoHour>18:30h</EventInfoHour>
+        <EventInfoHour>18h:30</EventInfoHour>
       </InfoDate>
       <InfoDate width={40}>
         <EventInfoText>Evento</EventInfoText>
-        <EventInfoHour>19h até as 23h</EventInfoHour>
+        <EventInfoHour>19h até às 23h</EventInfoHour>
       </InfoDate>
     </MobileWrapBox>
   </EventInfoContainer>
