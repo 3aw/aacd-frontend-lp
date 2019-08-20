@@ -10,7 +10,9 @@ export const Container = styled.div`
   height: 100vh;
   position: fixed;
   z-index: 9999;
-  display: ${props => (props.active ? "block" : "none")};
+  display: ${props => (props.active ? "flex" : "none")};
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 768px) {
     padding: 0 20px;
     display: flex;
@@ -22,10 +24,6 @@ export const Container = styled.div`
 export const Box = styled.div`
   width: 660px;
   background: ${colors.white};
-  position: absolute;
-  left: 50%;
-  top: 18%;
-  margin-left: -330px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +37,7 @@ export const Box = styled.div`
     top: 30px;
     padding: 0 15px;
     justify-content: space-evenly;
-    left: 0;
+    /* left: 0; */
     margin-left: 0;
   }
 `;

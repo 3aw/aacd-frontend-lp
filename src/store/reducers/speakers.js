@@ -25,15 +25,15 @@ const INITIAL_STATE = [
     theme: "Inovação",
     name: "Dr. Claudio Lottenberg",
     ocupation:
-      "Presidente Do Conselho De Administração Do Hospital Albert Einstein"
+      "Presidente do Conselho de ADM do Hospital Albert Einstein e da UnitedHealth Group Brazil"
   },
   {
     id: 2,
     background: letterM,
     image: Speaker2,
     theme: "Motivação",
-    name: "Bernadinho",
-    ocupation: "Técnico da Seleção Brasileira de voleibol e campeão olímpico"
+    name: "Bernardinho",
+    ocupation: "Ex-Técnico da Seleção Brasileira de voleibol e campeão olímpico"
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const INITIAL_STATE = [
     image: Speaker4,
     theme: "Amor",
     name: "Monja Coen",
-    ocupation: "Monja Coen"
+    ocupation: "Líder Espiritual"
   },
   {
     id: 5,
@@ -81,7 +81,7 @@ const INITIAL_STATE = [
     image: Speaker8,
     theme: "Negócio",
     name: "Luiza Helena Trajano",
-    ocupation: "Presidenta do conselho de administração do magazine luiza"
+    ocupation: "Presidente do conselho de administração do magazine luiza"
   },
   {
     id: 9,
@@ -89,15 +89,16 @@ const INITIAL_STATE = [
     image: Speaker9,
     theme: "Determinação e Dedicação",
     name: "Paulo Storani",
-    ocupation: "Ex-comandante Do bope"
+    ocupation:
+      "Capitão Veterano do BOPE, consultor dos filmes Tropa de Elite e Antropólogo"
   },
   {
     id: 10,
     background: letterO,
     image: Speaker10,
     theme: "Ong oportunidade aacd",
-    name: "Marcelo Kheirallah",
-    ocupation: "Pres. Voluntário do conselho de admin. Da aacd"
+    name: "Marcelo Felipe Kheirallah",
+    ocupation: "Presidente Voluntário do conselho de admin. Da aacd"
   }
 ];
 
