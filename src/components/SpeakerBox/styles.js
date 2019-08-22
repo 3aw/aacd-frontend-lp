@@ -11,7 +11,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: ${props => (props.empty ? "space-around" : "center")};
   border-radius: ${metrics.borderRadius.square};
-  background: url(${props => props.bg});
+  background: #fff;
   background-repeat: no-repeat;
   margin-bottom: 60px;
   margin-right: 15px;
@@ -58,15 +58,10 @@ export const Strong = styled.strong`
 `;
 
 export const Theme = ({ children }) => {
-  const theme = children;
-  const firstLetter = theme.substring(0, 1);
-  const word = theme.substring(1);
-  return (
-    <ThemeText>
-      <Strong>{firstLetter}</Strong>
-      {word}
-    </ThemeText>
-  );
+  // const theme = children;
+  // const firstLetter = theme.substring(0, 1);
+  // const word = theme.substring(1);
+  return <ThemeText>{children}</ThemeText>;
 };
 
 export const Name = styled.h3`

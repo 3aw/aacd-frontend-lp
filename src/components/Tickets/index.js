@@ -6,14 +6,14 @@ import { connect } from "react-redux";
 import axios from "axios";
 
 const Tickets = ({ tickets, dispatch }) => {
-  const [lotes, setLotes] = useState([]);
+  // const [lotes, setLotes] = useState([]);
   const [lote, setLote] = useState({ value: 0 });
   //
   async function getData() {
     const response = await axios
       .get("http://impactar.3aw.com.br/batches/list")
       .catch(err => err.response);
-    setLotes(response.data.lotes);
+    // setLotes(response.data.lotes);
     setLote(response.data.lote);
   }
   useEffect(() => {
