@@ -30,7 +30,7 @@ export const Image = styled.img``;
 
 export const ThemeText = styled.h3`
   font-family: "Oswald", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: ${metrics.fonts.regular};
   color: ${colors.darkgreen};
   text-transform: uppercase;

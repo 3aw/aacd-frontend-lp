@@ -48,7 +48,7 @@ export const TitleText = styled.h2`
 export const SpeakerContainer = styled.div`
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   @media screen and (max-width: 1200px) {
     width: 80%;
