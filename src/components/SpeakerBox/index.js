@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Image, Theme, Name, Ocupation, TopText } from "./styles";
 
 const SpeakerBox = props => (
-  <Container bg={props.bg}>
+  <Container empty={props.empty} bg={props.bg}>
     <TopText>
       <Image src={props.image} />
       <Theme>{props.theme}</Theme>

@@ -11,6 +11,7 @@ const ThemesAndSpeakers = ({ form, speakers, dispatch }) => (
       <SpeakerContainer>
         {speakers.map(speaker => (
           <SpeakerBox
+            empty={speaker.confirmed}
             key={speaker.id}
             bg={speaker.background}
             image={speaker.image}

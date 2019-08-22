@@ -38,10 +38,11 @@ const INITIAL_STATE = [
   {
     id: 3,
     background: letterP,
-    image: Speaker3,
+    // image: Speaker3,
     theme: "Produtividade",
-    name: "Roberto Justus",
-    ocupation: "Empresário e apresentador"
+    confirmed: false
+    // name: "Roberto Justus",
+    // ocupation: "Empresário e apresentador"
   },
   {
     id: 4,
