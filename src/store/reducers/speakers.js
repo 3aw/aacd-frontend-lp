@@ -25,7 +25,8 @@ const INITIAL_STATE = [
     theme: "Inovação",
     name: "Dr. Claudio Lottenberg",
     ocupation:
-      "Presidente do Conselho de ADM do Hospital Albert Einstein e da UnitedHealth Group Brazil"
+      "Presidente do Conselho de ADM do Hospital Albert Einstein e da UnitedHealth Group Brazil",
+    confirmed: true
   },
   {
     id: 2,
@@ -33,7 +34,9 @@ const INITIAL_STATE = [
     image: Speaker2,
     theme: "Motivação",
     name: "Bernardinho",
-    ocupation: "Ex-Técnico da Seleção Brasileira de voleibol e campeão olímpico"
+    ocupation:
+      "Ex-Técnico da Seleção Brasileira de voleibol e campeão olímpico",
+    confirmed: true
   },
   {
     id: 3,
@@ -50,7 +53,8 @@ const INITIAL_STATE = [
     image: Speaker4,
     theme: "Amor",
     name: "Monja Coen",
-    ocupation: "Líder Espiritual"
+    ocupation: "Líder Espiritual",
+    confirmed: true
   },
   {
     id: 5,
@@ -58,7 +62,8 @@ const INITIAL_STATE = [
     image: Speaker5,
     theme: "Confiança",
     name: "Ana Theresa Borsari",
-    ocupation: "Presidente da peugeot brasil e conselheira da vivo"
+    ocupation: "Presidente da peugeot brasil e conselheira da vivo",
+    confirmed: true
   },
   {
     id: 6,
@@ -66,7 +71,9 @@ const INITIAL_STATE = [
     image: Speaker6,
     theme: "Transformação",
     name: "Gil Giardelli",
-    ocupation: "Professor Do Mit, Colunista Bandnews E Ref. Em Inovação Digital"
+    ocupation:
+      "Professor Do Mit, Colunista Bandnews E Ref. Em Inovação Digital",
+    confirmed: true
   },
   {
     id: 7,
@@ -74,7 +81,8 @@ const INITIAL_STATE = [
     image: Speaker7,
     theme: "Adaptabilidade",
     name: "Anna Chaia",
-    ocupation: "CEO e Escritora"
+    ocupation: "CEO e Escritora",
+    confirmed: true
   },
   {
     id: 8,
@@ -82,7 +90,8 @@ const INITIAL_STATE = [
     image: Speaker8,
     theme: "Negócio",
     name: "Luiza Helena Trajano",
-    ocupation: "Presidente do conselho de administração do magazine luiza"
+    ocupation: "Presidente do conselho de administração do magazine luiza",
+    confirmed: true
   },
   {
     id: 9,
@@ -91,7 +100,8 @@ const INITIAL_STATE = [
     theme: "Determinação e Dedicação",
     name: "Paulo Storani",
     ocupation:
-      "Capitão Veterano do BOPE, consultor dos filmes Tropa de Elite e Antropólogo"
+      "Capitão Veterano do BOPE, consultor dos filmes Tropa de Elite e Antropólogo",
+    confirmed: true
   },
   {
     id: 10,
@@ -99,7 +109,8 @@ const INITIAL_STATE = [
     image: Speaker10,
     theme: "Ong oportunidade aacd",
     name: "Marcelo Felipe Kheirallah",
-    ocupation: "Presidente Voluntário do conselho de admin. Da aacd"
+    ocupation: "Presidente Voluntário do conselho de admin. Da aacd",
+    confirmed: true
   }
 ];
 
