@@ -52,8 +52,7 @@ const INITIAL_STATE = [
     image: Speaker6,
     theme: "Transformação",
     name: "Gil Giardelli",
-    ocupation:
-      "Professor Do Mit, Colunista Bandnews E Ref. Em Inovação Digital",
+    ocupation: "Professor Global de MBA",
     confirmed: true
   },
   {
