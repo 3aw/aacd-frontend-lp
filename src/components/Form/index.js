@@ -96,7 +96,6 @@ export class Form extends Component {
       active: true,
       subscribers: [...subscribers, { name: "", rg: "" }]
     });
-    console.log(this.state.subscribers);
   };
 
   // seed = e => {
