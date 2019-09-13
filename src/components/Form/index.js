@@ -94,26 +94,27 @@ export class Form extends Component {
     const subscribers = this.state.subscribers;
     this.setState({
       active: true,
-      subscribers: [...subscribers, { name: "Samuel", rg: "" }]
+      subscribers: [...subscribers, { name: "", rg: "" }]
     });
+    console.log(this.state.subscribers);
   };
 
-  seed = e => {
-    this.setState({
-      buyer: {
-        name: "Samuel Levy",
-        email: "samuellevy@nokengo.com",
-        phone: "21982785401",
-        birthdate: "20/07/1992",
-        rg: "23.488.577-0"
-      },
-      subscribers: [
-        { name: "Cayque Freitas", rg: "1112223334" },
-        { name: "Vinicius Machado", rg: "9998885552" }
-      ]
-    });
-    console.log("seed");
-  };
+  // seed = e => {
+  //   this.setState({
+  //     buyer: {
+  //       name: "Samuel Levy",
+  //       email: "samuellevy@nokengo.com",
+  //       phone: "21982785401",
+  //       birthdate: "20/07/1992",
+  //       rg: "23.488.577-0"
+  //     },
+  //     subscribers: [
+  //       { name: "Cayque Freitas", rg: "1112223334" },
+  //       { name: "Vinicius Machado", rg: "9998885552" }
+  //     ]
+  //   });
+  //   console.log("seed");
+  // };
 
   send = async () => {
     console.log("sending");
